@@ -33,6 +33,18 @@ Known Gaps
 - pages are static HTML artifacts only (no backend/form processing wired)
 - final production URL routing and analytics wiring are not configured in this workspace
 
+Publish Status
+- Netlify: LIVE
+  - Production: `https://atlasflow-v1-static-20260312.netlify.app`
+  - Unique deploy URL: `https://69b330645c9fc2441383ad84--atlasflow-v1-static-20260312.netlify.app`
+  - Verification: HTTP 200 for `/`, `/index.html`, `/homepage.html`, `/contact.html`
+- Vercel: BLOCKED
+  - Last command: `vercel --prod --yes`
+  - Last error: `The specified token is not valid. Use vercel login to generate a new token.`
+- GitHub Pages: BLOCKED
+  - Local branch prepared: `gh-pages` at commit `2e1d191`
+  - Blocker: no GitHub remote configured and no authenticated push path in this workspace
+
 Deployment Notes
 - keep page filenames unchanged to preserve inter-page links
 - wire `contact.html` form submission endpoint before production
@@ -40,4 +52,5 @@ Deployment Notes
 - map "book call" CTA targets to production scheduling URL if required
 
 Next Move
-- run a final browser QA pass on desktop/mobile, then publish this folder as the initial AtlasFlow web artifact set.
+- complete Vercel auth (`vercel login` or valid token) and re-run `vercel --prod --yes`
+- set `origin` to the target GitHub repository and push `gh-pages` with `git push -u origin gh-pages --force`
