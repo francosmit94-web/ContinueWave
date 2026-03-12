@@ -38,12 +38,13 @@ Publish Status
   - Production: `https://atlasflow-v1-static-20260312.netlify.app`
   - Unique deploy URL: `https://69b330645c9fc2441383ad84--atlasflow-v1-static-20260312.netlify.app`
   - Verification: HTTP 200 for `/`, `/index.html`, `/homepage.html`, `/contact.html`
-- Vercel: BLOCKED
-  - Last command: `vercel --prod --yes`
-  - Last error: no valid session; login requires interactive browser auth (`vercel login`).
+- Vercel: LIVE
+  - Production: `https://implementationpages.vercel.app`
+  - Inspect URL: `https://vercel.com/francosmit94-7829s-projects/implementation_pages/5Z4yKnKoXGPuYyixWahrt5SyzPbc`
+  - Verification: HTTP 200 for `/`, `/index.html`, `/homepage.html`, `/contact.html`
 - GitHub Pages: LIVE
   - Repository: `https://github.com/francosmit94-web/ContinueWave`
-  - Branch/source: `gh-pages` root at commit `82d2229`
+  - Branch/source: `gh-pages` root at commit `b71127e`
   - URL: `https://francosmit94-web.github.io/ContinueWave/`
   - Verification: HTTP 200 for `/`, `/index.html`, `/contact.html`
 
@@ -54,4 +55,4 @@ Deployment Notes
 - map "book call" CTA targets to production scheduling URL if required
 
 Next Move
-- complete Vercel auth (`vercel login` or valid token) and re-run `vercel --prod --yes`
+- run a final UX/content QA sweep across all three live endpoints and then connect form endpoints for production capture
