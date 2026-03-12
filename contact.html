@@ -8,6 +8,7 @@
       name="description"
       content="Reach out if you are operating in a regulated market or running a trust-based practice and need a clearer next move."
     />
+    <link rel="canonical" href="https://implementationpages.vercel.app/contact.html" />
     <style>
       :root {
         --bg: #f2efe9;
@@ -207,7 +208,7 @@
         <div class="container">
           <div class="card">
             <h2>Send an Inquiry</h2>
-            <form>
+            <form data-form-type="contact">
               <div>
                 <label for="name">Name</label>
                 <input id="name" name="name" type="text" required />
@@ -243,6 +244,9 @@
     <footer class="site-footer">
       <div class="container">AtlasFlow | Clear next moves for regulated and trust-based operators.</div>
     </footer>
+      <script src="assets/site-config.js" defer></script>
+    <script src="assets/site-runtime.js" defer></script>
   </body>
 </html>
+
 
