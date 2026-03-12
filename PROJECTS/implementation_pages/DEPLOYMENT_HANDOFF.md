@@ -40,10 +40,11 @@ Publish Status
   - Verification: HTTP 200 for `/`, `/index.html`, `/homepage.html`, `/contact.html`
 - Vercel: BLOCKED
   - Last command: `vercel --prod --yes`
-  - Last error: `The specified token is not valid. Use vercel login to generate a new token.`
+  - Last error: login flow still requires interactive auth (`vercel login`).
 - GitHub Pages: BLOCKED
-  - Local branch prepared: `gh-pages` at commit `2e1d191`
-  - Blocker: no GitHub remote configured and no authenticated push path in this workspace
+  - Local branch prepared: `gh-pages` at commit `30a0818`
+  - Origin configured: `https://github.com/francosmit94/ContinueWave.git`
+  - Last push result: `Repository not found` (target repo missing or access mismatch)
 
 Deployment Notes
 - keep page filenames unchanged to preserve inter-page links
@@ -53,4 +54,4 @@ Deployment Notes
 
 Next Move
 - complete Vercel auth (`vercel login` or valid token) and re-run `vercel --prod --yes`
-- set `origin` to the target GitHub repository and push `gh-pages` with `git push -u origin gh-pages --force`
+- create/fix the target GitHub repository access for `origin`, then push `gh-pages` with `git push -u origin gh-pages --force`
