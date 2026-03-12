@@ -1,10 +1,10 @@
 Deployment Handoff
 
 Date
-- 2026-03-12
+- 2026-03-13
 
 Scope
-- AtlasFlow first-pass page implementation artifacts in `PROJECTS/implementation_pages/`
+- AtlasFlow first-pass page implementation artifacts published from repository root (flattened from original `PROJECTS/implementation_pages` set for GitHub Pages compatibility)
 
 Primary Entry
 - `index.html`
@@ -40,11 +40,12 @@ Publish Status
   - Verification: HTTP 200 for `/`, `/index.html`, `/homepage.html`, `/contact.html`
 - Vercel: BLOCKED
   - Last command: `vercel --prod --yes`
-  - Last error: login flow still requires interactive auth (`vercel login`).
-- GitHub Pages: BLOCKED
-  - Local branch prepared: `gh-pages` at commit `30a0818`
-  - Origin configured: `https://github.com/francosmit94/ContinueWave.git`
-  - Last push result: `Repository not found` (target repo missing or access mismatch)
+  - Last error: no valid session; login requires interactive browser auth (`vercel login`).
+- GitHub Pages: LIVE
+  - Repository: `https://github.com/francosmit94-web/ContinueWave`
+  - Branch/source: `gh-pages` root at commit `bf5f6bf`
+  - URL: `https://francosmit94-web.github.io/ContinueWave/`
+  - Verification: HTTP 200 for `/`, `/index.html`, `/contact.html`
 
 Deployment Notes
 - keep page filenames unchanged to preserve inter-page links
@@ -54,4 +55,3 @@ Deployment Notes
 
 Next Move
 - complete Vercel auth (`vercel login` or valid token) and re-run `vercel --prod --yes`
-- create/fix the target GitHub repository access for `origin`, then push `gh-pages` with `git push -u origin gh-pages --force`
