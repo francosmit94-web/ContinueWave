@@ -1,0 +1,248 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact AtlasFlow</title>
+    <meta
+      name="description"
+      content="Reach out if you are operating in a regulated market or running a trust-based practice and need a clearer next move."
+    />
+    <style>
+      :root {
+        --bg: #f2efe9;
+        --ink: #131619;
+        --muted: #535c60;
+        --line: #d1cac0;
+        --brand: #2b4b63;
+        --brand-soft: #ebf2f7;
+        --card: #fbf8f3;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 100% 0%, #e6eef5 0%, transparent 38%),
+          radial-gradient(circle at 0% 0%, #f9f4eb 0%, transparent 45%),
+          linear-gradient(180deg, var(--bg) 0%, #faf7f2 100%);
+        line-height: 1.45;
+      }
+
+      .container { width: min(960px, 92vw); margin: 0 auto; }
+
+      .site-header {
+        border-bottom: 1px solid var(--line);
+        background: color-mix(in srgb, var(--bg) 82%, white 18%);
+      }
+
+      .site-header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.9rem 0;
+      }
+
+      .brand { font-weight: 800; letter-spacing: 0.02em; }
+
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.95rem;
+      }
+
+      nav a { text-decoration: none; color: var(--ink); font-size: 0.95rem; }
+      nav a:hover { color: var(--brand); }
+
+      section { padding: 2.8rem 0; }
+      .hero { padding-top: 3.8rem; }
+
+      .hero-wrap {
+        border-radius: 1rem;
+        background: linear-gradient(126deg, #2b4b63 0%, #35607d 65%, #3f7395 100%);
+        color: #ebf4fb;
+        padding: 1.45rem;
+      }
+
+      h1, h2 { margin: 0 0 0.8rem; line-height: 1.15; }
+      h1 { font-size: clamp(1.8rem, 4.8vw, 2.8rem); }
+
+      p { margin: 0 0 1rem; color: var(--muted); }
+      .hero p { color: #dce9f4; }
+
+      .card {
+        border: 1px solid var(--line);
+        background: var(--card);
+        border-radius: 1rem;
+        padding: 1.2rem;
+      }
+
+      ul { margin: 0.55rem 0 0; padding-left: 1.05rem; color: var(--muted); }
+
+      form {
+        margin-top: 0.8rem;
+        display: grid;
+        gap: 0.75rem;
+      }
+
+      label {
+        font-weight: 700;
+        font-size: 0.92rem;
+      }
+
+      input, select, textarea {
+        width: 100%;
+        border: 1px solid #b9cddd;
+        border-radius: 0.6rem;
+        padding: 0.7rem;
+        font: inherit;
+        background: #fff;
+      }
+
+      textarea {
+        min-height: 90px;
+        resize: vertical;
+      }
+
+      .cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+      }
+
+      .btn {
+        display: inline-block;
+        text-decoration: none;
+        padding: 0.72rem 1.12rem;
+        border-radius: 999px;
+        border: 1px solid transparent;
+        font-weight: 700;
+      }
+
+      .btn-primary {
+        background: #eff6fc;
+        border-color: #eff6fc;
+        color: #27475d;
+      }
+
+      .btn-secondary {
+        background: #f8fcff;
+        border-color: #b5cadb;
+        color: #2a4b62;
+      }
+
+      .site-footer {
+        border-top: 1px solid var(--line);
+        margin-top: 2rem;
+        padding: 1.4rem 0 2rem;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <div class="brand">AtlasFlow</div>
+        <nav aria-label="Primary">
+          <ul>
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="regulated_growth.html">Regulated Growth</a></li>
+            <li><a href="practitioner_growth.html">Practitioner Growth</a></li>
+            <li><a href="compliance_report.html">Compliance Report</a></li>
+            <li><a href="strategy_call.html">Strategy Call</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero-wrap">
+            <h1>Start The Conversation</h1>
+            <p>
+              If you are operating in a regulated market, building a trust-based practice, or trying to figure out
+              the right next move, reach out.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="card">
+            <h2>Who Should Reach Out</h2>
+            <ul>
+              <li>You already know what you need help with</li>
+              <li>You want to book a call</li>
+              <li>You want to ask whether there is a fit</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="card">
+            <h2>Contact Options</h2>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="strategy_call.html">Book a Call</a>
+              <a class="btn btn-secondary" href="#inquiry">Send an Inquiry</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="inquiry">
+        <div class="container">
+          <div class="card">
+            <h2>Send an Inquiry</h2>
+            <form>
+              <div>
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" required />
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required />
+              </div>
+              <div>
+                <label for="reason">Reason For Contact</label>
+                <select id="reason" name="reason" required>
+                  <option value="">Select one</option>
+                  <option value="strategy_call">Book a strategy call</option>
+                  <option value="audit">Request an audit</option>
+                  <option value="services">Service fit inquiry</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div>
+                <label for="message">Short Message</label>
+                <textarea id="message" name="message" required></textarea>
+              </div>
+              <div class="cta-row">
+                <button class="btn btn-primary" type="submit">Send an Inquiry</button>
+                <a class="btn btn-secondary" href="strategy_call.html">Book a Call</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">AtlasFlow | Clear next moves for regulated and trust-based operators.</div>
+    </footer>
+  </body>
+</html>
+

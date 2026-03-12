@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AtlasFlow Implementation Index</title>
+    <meta name="description" content="Navigation index for AtlasFlow implementation page artifacts." />
+    <style>
+      :root {
+        --bg: #f2efe9;
+        --ink: #131619;
+        --muted: #545d61;
+        --line: #d1cac0;
+        --brand: #1f4f45;
+        --card: #fbf8f3;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 100% 0%, #e8f2ee 0%, transparent 38%),
+          linear-gradient(180deg, var(--bg) 0%, #faf7f2 100%);
+      }
+
+      .container { width: min(980px, 92vw); margin: 0 auto; }
+
+      header, footer { padding: 1.3rem 0; }
+      header { border-bottom: 1px solid var(--line); }
+      footer { border-top: 1px solid var(--line); margin-top: 2rem; color: var(--muted); }
+
+      h1, h2 { margin: 0 0 0.8rem; }
+      h1 { font-size: clamp(1.7rem, 4vw, 2.4rem); }
+      p { margin: 0 0 1rem; color: var(--muted); }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 0.9rem;
+      }
+
+      .card {
+        border: 1px solid var(--line);
+        background: var(--card);
+        border-radius: 0.9rem;
+        padding: 0.95rem;
+      }
+
+      a {
+        color: var(--brand);
+        text-decoration: none;
+        font-weight: 700;
+      }
+
+      a:hover { text-decoration: underline; }
+
+      .meta {
+        margin-top: 1.2rem;
+        border: 1px solid var(--line);
+        border-radius: 0.9rem;
+        padding: 0.9rem;
+        background: #f7fbf9;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>AtlasFlow Implementation Index</h1>
+        <p>Single entry point for all generated page artifacts.</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section>
+        <h2>Pages</h2>
+        <div class="grid">
+          <div class="card"><a href="homepage.html">Homepage</a></div>
+          <div class="card"><a href="regulated_growth.html">Regulated Growth</a></div>
+          <div class="card"><a href="practitioner_growth.html">Practitioner Growth</a></div>
+          <div class="card"><a href="compliance_report.html">Compliance Report</a></div>
+          <div class="card"><a href="strategy_call.html">Strategy Call</a></div>
+          <div class="card"><a href="practitioner_growth_audit.html">Practitioner Growth Audit</a></div>
+          <div class="card"><a href="lead_response_engine.html">Lead Response Engine</a></div>
+          <div class="card"><a href="compliance_audit.html">Compliance Audit</a></div>
+          <div class="card"><a href="newsletter.html">Newsletter</a></div>
+          <div class="card"><a href="about.html">About</a></div>
+          <div class="card"><a href="contact.html">Contact</a></div>
+        </div>
+      </section>
+
+      <section class="meta">
+        <h2>QA</h2>
+        <p>See `qa_review.md` in this folder for the latest link/CTA consistency checks.</p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">AtlasFlow | Implementation artifact index.</div>
+    </footer>
+  </body>
+</html>

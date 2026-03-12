@@ -1,0 +1,301 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compliance Audit | AtlasFlow</title>
+    <meta
+      name="description"
+      content="A practical diagnostic for regulated operators who need a clearer view of gaps, readiness, and decision risk."
+    />
+    <style>
+      :root {
+        --bg: #f2efe9;
+        --ink: #131619;
+        --muted: #535d61;
+        --line: #d1c9bf;
+        --brand: #374b64;
+        --brand-soft: #ecf1f7;
+        --card: #fbf8f3;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 100% 0%, #e8eef6 0%, transparent 38%),
+          radial-gradient(circle at 0% 0%, #f9f4eb 0%, transparent 45%),
+          linear-gradient(180deg, var(--bg) 0%, #faf7f2 100%);
+        line-height: 1.45;
+      }
+
+      .container { width: min(1100px, 92vw); margin: 0 auto; }
+
+      .site-header {
+        border-bottom: 1px solid var(--line);
+        background: color-mix(in srgb, var(--bg) 82%, white 18%);
+      }
+
+      .site-header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.9rem 0;
+      }
+
+      .brand { font-weight: 800; letter-spacing: 0.02em; }
+
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.95rem;
+      }
+
+      nav a { text-decoration: none; color: var(--ink); font-size: 0.95rem; }
+      nav a:hover { color: var(--brand); }
+
+      section { padding: 3rem 0; }
+      .hero { padding-top: 3.9rem; }
+
+      .hero-wrap {
+        border-radius: 1rem;
+        background: linear-gradient(126deg, #374b64 0%, #455b75 65%, #536b87 100%);
+        color: #ecf2f8;
+        padding: 1.55rem;
+      }
+
+      .eyebrow {
+        text-transform: uppercase;
+        letter-spacing: 0.11em;
+        font-size: 0.75rem;
+        color: #cfdbeb;
+      }
+
+      h1, h2, h3 { margin: 0 0 0.8rem; line-height: 1.15; }
+      h1 { font-size: clamp(1.9rem, 4.8vw, 3rem); max-width: 15ch; }
+
+      p { margin: 0 0 1rem; color: var(--muted); }
+      .hero p { color: #dbe5f1; }
+
+      .cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+      }
+
+      .btn {
+        display: inline-block;
+        text-decoration: none;
+        padding: 0.72rem 1.12rem;
+        border-radius: 999px;
+        border: 1px solid transparent;
+        font-weight: 700;
+      }
+
+      .btn-primary {
+        background: #f1f6fb;
+        border-color: #f1f6fb;
+        color: #30465f;
+      }
+
+      .btn-secondary {
+        border-color: #c4d4e8;
+        color: #eaf1f8;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 1rem;
+      }
+
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 1rem;
+        padding: 1.05rem;
+      }
+
+      ul { margin: 0.55rem 0 0; padding-left: 1.05rem; color: var(--muted); }
+
+      .alert {
+        border: 1px solid #c8d4e4;
+        border-left: 4px solid #48637f;
+        border-radius: 0.7rem;
+        background: #f8fbff;
+        padding: 0.85rem;
+      }
+
+      .faq details {
+        border: 1px solid var(--line);
+        border-radius: 0.8rem;
+        background: #fffdf9;
+        padding: 0.85rem;
+        margin-bottom: 0.7rem;
+      }
+
+      .faq summary { font-weight: 700; cursor: pointer; }
+
+      .cta-box {
+        border: 1px solid var(--line);
+        border-radius: 1rem;
+        background: var(--brand-soft);
+        padding: 1.2rem;
+      }
+
+      .site-footer {
+        border-top: 1px solid var(--line);
+        margin-top: 2rem;
+        padding: 1.4rem 0 2rem;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <div class="brand">AtlasFlow</div>
+        <nav aria-label="Primary">
+          <ul>
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="regulated_growth.html">Regulated Growth</a></li>
+            <li><a href="practitioner_growth.html">Practitioner Growth</a></li>
+            <li><a href="compliance_report.html">Compliance Report</a></li>
+            <li><a href="strategy_call.html">Strategy Call</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero-wrap">
+            <p class="eyebrow">Diagnostic Offer</p>
+            <h1>A Clearer Read On Where Your Regulated Setup Is Weak</h1>
+            <p>
+              A practical audit for operators and entrants who need a sharper view of structural gaps, readiness
+              issues, and decision risk before moving further.
+            </p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="#cta">Request the Audit</a>
+              <a class="btn btn-secondary" href="strategy_call.html">Book a Strategy Call</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2>Why This Exists</h2>
+          <p>
+            In regulated and trust-sensitive markets, weak assumptions create expensive downstream consequences.
+            Many operators move forward with partial clarity, unclear readiness, or structural blind spots they only
+            discover later.
+          </p>
+          <p>The audit is designed to surface those gaps earlier, while better decisions are still possible.</p>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2>What The Audit Looks At</h2>
+          <div class="card">
+            <ul>
+              <li>Structural gaps</li>
+              <li>Positioning weaknesses</li>
+              <li>Readiness issues</li>
+              <li>Decision blind spots</li>
+              <li>Where the current setup is less solid than it appears</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2>Who It Is For</h2>
+          <div class="grid">
+            <article class="card"><p>Cannabis operators</p></article>
+            <article class="card"><p>CBD founders</p></article>
+            <article class="card"><p>Regulated-market entrants</p></article>
+            <article class="card"><p>Businesses already moving but needing a clearer diagnostic</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2>What You Leave With</h2>
+          <div class="grid">
+            <article class="card"><p>A clearer diagnosis of what is weak</p></article>
+            <article class="card"><p>Stronger priorities</p></article>
+            <article class="card"><p>A better basis for next decisions</p></article>
+            <article class="card"><p>More confidence in what should happen next</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2>What This Is Not</h2>
+          <div class="alert">
+            This is not a legal guarantee or blanket compliance sign-off. It is a practical diagnostic designed to
+            improve decision quality, reduce blind spots, and make the next move more informed.
+          </div>
+          <h3 style="margin-top: 1rem;">Why AtlasFlow</h3>
+          <p>
+            AtlasFlow works in markets where trust, structure, and positioning matter. The focus is on seeing the
+            setup clearly enough to act with better judgment.
+          </p>
+        </div>
+      </section>
+
+      <section class="faq">
+        <div class="container">
+          <h2>FAQ</h2>
+          <details open>
+            <summary>Who is this audit for?</summary>
+            <p>Operators and entrants who need a clearer view of structural gaps and readiness.</p>
+          </details>
+          <details>
+            <summary>Is this a guarantee of compliance?</summary>
+            <p>No. It is a diagnostic designed to improve decision quality and reduce blind spots.</p>
+          </details>
+          <details>
+            <summary>What should I start with if I am earlier-stage?</summary>
+            <p>Start with the compliance report or a strategy call first.</p>
+          </details>
+        </div>
+      </section>
+
+      <section id="cta">
+        <div class="container">
+          <div class="cta-box">
+            <h2>If your current understanding may be incomplete, start with the audit before weak assumptions get more expensive.</h2>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="contact.html#inquiry">Request the Audit</a>
+              <a class="btn" style="border-color: #b7cade; color: #30465f;" href="compliance_report.html"
+                >Start With Compliance Report</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">AtlasFlow | Practical diagnostics for regulated-market decision risk.</div>
+    </footer>
+  </body>
+</html>
+

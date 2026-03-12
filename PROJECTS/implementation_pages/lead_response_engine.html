@@ -1,0 +1,285 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lead Response Engine | AtlasFlow</title>
+    <meta
+      name="description"
+      content="Fix slow replies, weak follow-up, and hidden conversion leakage before you chase more leads."
+    />
+    <style>
+      :root {
+        --bg: #f2f0ea;
+        --ink: #131619;
+        --muted: #535d60;
+        --line: #d2cbc0;
+        --brand: #7a2f2f;
+        --brand-soft: #fdeeee;
+        --card: #fbf8f3;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 100% 0%, #f8e7e7 0%, transparent 38%),
+          radial-gradient(circle at 0% 0%, #f9f4eb 0%, transparent 45%),
+          linear-gradient(180deg, var(--bg) 0%, #faf7f2 100%);
+        line-height: 1.45;
+      }
+
+      .container { width: min(1100px, 92vw); margin: 0 auto; }
+
+      .site-header {
+        border-bottom: 1px solid var(--line);
+        background: color-mix(in srgb, var(--bg) 82%, white 18%);
+      }
+
+      .site-header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.9rem 0;
+      }
+
+      .brand { font-weight: 800; letter-spacing: 0.02em; }
+
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.95rem;
+      }
+
+      nav a { text-decoration: none; color: var(--ink); font-size: 0.95rem; }
+      nav a:hover { color: var(--brand); }
+
+      section { padding: 3rem 0; }
+      .hero { padding-top: 3.9rem; }
+
+      .hero-wrap {
+        border-radius: 1rem;
+        background: linear-gradient(126deg, #7a2f2f 0%, #8f3a3a 65%, #a14646 100%);
+        color: #fdecec;
+        padding: 1.55rem;
+      }
+
+      .eyebrow {
+        text-transform: uppercase;
+        letter-spacing: 0.11em;
+        font-size: 0.75rem;
+        color: #f4cfcf;
+      }
+
+      h1, h2, h3 { margin: 0 0 0.8rem; line-height: 1.15; }
+      h1 { font-size: clamp(1.9rem, 4.8vw, 3rem); max-width: 15ch; }
+
+      p { margin: 0 0 1rem; color: var(--muted); }
+      .hero p { color: #ffe4e4; }
+
+      .cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+      }
+
+      .btn {
+        display: inline-block;
+        text-decoration: none;
+        padding: 0.72rem 1.12rem;
+        border-radius: 999px;
+        border: 1px solid transparent;
+        font-weight: 700;
+      }
+
+      .btn-primary {
+        background: #fff0f0;
+        border-color: #fff0f0;
+        color: #6f2a2a;
+      }
+
+      .btn-secondary {
+        border-color: #f0b9b9;
+        color: #ffe9e9;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 1rem;
+      }
+
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 1rem;
+        padding: 1.05rem;
+      }
+
+      ul { margin: 0.55rem 0 0; padding-left: 1.05rem; color: var(--muted); }
+
+      .faq details {
+        border: 1px solid var(--line);
+        border-radius: 0.8rem;
+        background: #fffdf9;
+        padding: 0.85rem;
+        margin-bottom: 0.7rem;
+      }
+
+      .faq summary { font-weight: 700; cursor: pointer; }
+
+      .cta-box {
+        border: 1px solid var(--line);
+        border-radius: 1rem;
+        background: var(--brand-soft);
+        padding: 1.2rem;
+      }
+
+      .site-footer {
+        border-top: 1px solid var(--line);
+        margin-top: 2rem;
+        padding: 1.4rem 0 2rem;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <div class="brand">AtlasFlow</div>
+        <nav aria-label="Primary">
+          <ul>
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="regulated_growth.html">Regulated Growth</a></li>
+            <li><a href="practitioner_growth.html">Practitioner Growth</a></li>
+            <li><a href="compliance_report.html">Compliance Report</a></li>
+            <li><a href="strategy_call.html">Strategy Call</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero-wrap">
+            <p class="eyebrow">Productized Service</p>
+            <h1>Stop Losing Good Leads To Slow And Weak Follow-Up</h1>
+            <p>
+              The Lead Response Engine helps practices and service businesses respond faster, qualify better, and
+              recover more value from the inquiries they already get.
+            </p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="#cta">Book a Leak Audit</a>
+              <a class="btn btn-secondary" href="practitioner_growth_audit.html">Start With Practitioner Audit</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2>The Real Problem</h2>
+          <p>
+            Many businesses think they need more leads. Often, they need to stop wasting the ones they already have.
+            When response is slow, inconsistent, or unclear, conversion drops quietly.
+          </p>
+          <p>
+            Good inquiries go cold, follow-up breaks down, and revenue leaks out before the real issue is identified.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2>What The Lead Response Engine Helps Fix</h2>
+          <div class="card">
+            <ul>
+              <li>Slow speed-to-lead</li>
+              <li>Weak response quality</li>
+              <li>Poor qualification flow</li>
+              <li>Inconsistent follow-up</li>
+              <li>Hidden conversion leakage</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2>Who It Is For</h2>
+          <div class="grid">
+            <article class="card"><p>Local practices and clinics</p></article>
+            <article class="card"><p>Service businesses</p></article>
+            <article class="card"><p>Guesthouses and property-related operators</p></article>
+            <article class="card"><p>Other businesses where inbound handling affects revenue</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2>Why This Matters</h2>
+          <p>
+            Before adding more top-of-funnel effort, many businesses need a cleaner response system. If inquiries are
+            mishandled, more traffic does not solve the issue. It just makes the leak bigger.
+          </p>
+          <h3>Why AtlasFlow</h3>
+          <p>
+            AtlasFlow focuses on practical growth systems, fixing conversion damage points before piling on more
+            activity.
+          </p>
+        </div>
+      </section>
+
+      <section class="faq">
+        <div class="container">
+          <h2>FAQ</h2>
+          <details open>
+            <summary>What does the Lead Response Engine fix?</summary>
+            <p>Slow replies, weak qualification, inconsistent follow-up, and conversion leakage.</p>
+          </details>
+          <details>
+            <summary>Who is this for?</summary>
+            <p>Practices and service businesses where inbound inquiries materially affect revenue.</p>
+          </details>
+          <details>
+            <summary>Do I need more leads first?</summary>
+            <p>Often no. Many businesses first need to stop wasting the leads they already get.</p>
+          </details>
+        </div>
+      </section>
+
+      <section id="cta">
+        <div class="container">
+          <div class="cta-box">
+            <h2>If inquiries are coming in but outcomes are weak, start with a leak audit.</h2>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="contact.html#inquiry">Book a Leak Audit</a>
+              <a class="btn" style="border-color: #e5a7a7; color: #6f2a2a;" href="practitioner_growth.html"
+                >Book a Fit Call</a
+              >
+            </div>
+            <p style="margin-top: 0.9rem;">
+              If the audit reveals deeper growth issues, the next step may be broader acquisition or conversion support.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">AtlasFlow | Fix response leakage before chasing more traffic.</div>
+    </footer>
+  </body>
+</html>
+

@@ -1,0 +1,286 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regulated Growth | AtlasFlow</title>
+    <meta
+      name="description"
+      content="Growth systems for cannabis, CBD, telemedicine, and other compliance-sensitive markets where trust and positioning matter."
+    />
+    <style>
+      :root {
+        --bg: #f2efe9;
+        --ink: #131618;
+        --muted: #565d61;
+        --line: #d1c8bf;
+        --brand: #18533e;
+        --brand-soft: #eaf4ef;
+        --card: #fbf8f3;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 100% 0%, #e7f0ea 0%, transparent 38%),
+          radial-gradient(circle at 0% 0%, #f9f4eb 0%, transparent 45%),
+          linear-gradient(180deg, var(--bg) 0%, #faf7f2 100%);
+        line-height: 1.45;
+      }
+
+      .container { width: min(1100px, 92vw); margin: 0 auto; }
+
+      .site-header {
+        border-bottom: 1px solid var(--line);
+        background: color-mix(in srgb, var(--bg) 82%, white 18%);
+      }
+
+      .site-header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.9rem 0;
+      }
+
+      .brand { font-weight: 800; letter-spacing: 0.02em; }
+
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.95rem;
+      }
+
+      nav a { text-decoration: none; color: var(--ink); font-size: 0.95rem; }
+      nav a:hover { color: var(--brand); }
+
+      section { padding: 3rem 0; }
+      .hero { padding-top: 3.9rem; }
+
+      .hero-wrap {
+        border-radius: 1rem;
+        background: linear-gradient(126deg, #18533e 0%, #23624b 65%, #2b7258 100%);
+        color: #e9f7f1;
+        padding: 1.55rem;
+      }
+
+      .eyebrow {
+        text-transform: uppercase;
+        letter-spacing: 0.11em;
+        font-size: 0.75rem;
+        color: #cbe7dc;
+      }
+
+      h1, h2, h3 { margin: 0 0 0.8rem; line-height: 1.15; }
+      h1 { font-size: clamp(1.9rem, 4.8vw, 3rem); max-width: 16ch; }
+
+      p { margin: 0 0 1rem; color: var(--muted); }
+      .hero p { color: #d7ede3; }
+
+      .cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+      }
+
+      .btn {
+        display: inline-block;
+        text-decoration: none;
+        padding: 0.72rem 1.12rem;
+        border-radius: 999px;
+        border: 1px solid transparent;
+        font-weight: 700;
+      }
+
+      .btn-primary {
+        background: #edf8f3;
+        border-color: #edf8f3;
+        color: #144934;
+      }
+
+      .btn-secondary {
+        border-color: #b9ddcc;
+        color: #e7f5ee;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 1rem;
+      }
+
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 1rem;
+        padding: 1.05rem;
+      }
+
+      ul { margin: 0.55rem 0 0; padding-left: 1.05rem; color: var(--muted); }
+
+      .faq details {
+        border: 1px solid var(--line);
+        border-radius: 0.8rem;
+        background: #fffdf9;
+        padding: 0.85rem;
+        margin-bottom: 0.7rem;
+      }
+
+      .faq summary { font-weight: 700; cursor: pointer; }
+
+      .cta-box {
+        border: 1px solid var(--line);
+        border-radius: 1rem;
+        background: var(--brand-soft);
+        padding: 1.2rem;
+      }
+
+      .site-footer {
+        border-top: 1px solid var(--line);
+        margin-top: 2rem;
+        padding: 1.4rem 0 2rem;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <div class="brand">AtlasFlow</div>
+        <nav aria-label="Primary">
+          <ul>
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="regulated_growth.html">Regulated Growth</a></li>
+            <li><a href="practitioner_growth.html">Practitioner Growth</a></li>
+            <li><a href="compliance_report.html">Compliance Report</a></li>
+            <li><a href="strategy_call.html">Strategy Call</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero-wrap">
+            <p class="eyebrow">Service Lane</p>
+            <h1>Growth Systems For Regulated And Trust-Sensitive Markets</h1>
+            <p>
+              AtlasFlow helps cannabis, CBD, telemedicine, and other compliance-sensitive businesses build clearer
+              positioning, stronger conversion paths, and more practical growth systems.
+            </p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="#cta">Book a Regulated Growth Call</a>
+              <a class="btn btn-secondary" href="compliance_report.html">Start With Compliance Report</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2>Why These Markets Are Different</h2>
+          <p>
+            Not every market can be approached like a generic performance campaign. When trust is fragile,
+            compliance matters, and the environment is fragmented, weak positioning costs more.
+          </p>
+          <p>
+            Generic tactics break faster, noise increases, and bad assumptions create wasted motion. Regulated growth
+            needs a different approach.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2>What AtlasFlow Helps With</h2>
+          <div class="card">
+            <ul>
+              <li>Growth strategy under real-world constraints</li>
+              <li>Clearer market positioning</li>
+              <li>Sharper offer structure</li>
+              <li>Landing pages and conversion paths</li>
+              <li>Authority-building content</li>
+              <li>Selective acquisition support where it fits</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2>Who It Is For</h2>
+          <div class="grid">
+            <article class="card"><p>Cannabis operators and CBD founders</p></article>
+            <article class="card"><p>Telemedicine or wellness operators</p></article>
+            <article class="card"><p>Regulated-market entrants</p></article>
+            <article class="card"><p>Founders building in trust-fragmented environments</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2>What Makes AtlasFlow Different</h2>
+          <p>
+            AtlasFlow is not a generic full-service growth agency. The work is shaped around difficult markets where
+            trust, positioning, and operational clarity matter more than shallow volume tactics.
+          </p>
+          <h3>How This Connects</h3>
+          <p>This lane connects directly into focused offers:</p>
+          <ul>
+            <li>South African Cannabis Compliance Report</li>
+            <li>Strategy / Clarity Call</li>
+            <li>Follow-on audit and service work where appropriate</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="faq">
+        <div class="container">
+          <h2>FAQ</h2>
+          <details open>
+            <summary>What kinds of businesses fit this lane?</summary>
+            <p>Cannabis, CBD, telemedicine, wellness, and other compliance-sensitive or trust-fragmented businesses.</p>
+          </details>
+          <details>
+            <summary>Is this legal or regulatory advisory?</summary>
+            <p>No. It is growth and positioning work shaped by difficult market conditions.</p>
+          </details>
+          <details>
+            <summary>Where should I start?</summary>
+            <p>Start with the compliance report, a strategy call, or a regulated growth call, depending on your stage.</p>
+          </details>
+        </div>
+      </section>
+
+      <section id="cta">
+        <div class="container">
+          <div class="cta-box">
+            <h2>If compliance, trust, and fragmentation shape execution in your market, start with a regulated growth call.</h2>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="strategy_call.html">Book a Regulated Growth Call</a>
+              <a class="btn" style="border-color: #9fcdb7; color: #18533e;" href="compliance_report.html"
+                >Start With Compliance Report</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">AtlasFlow | Growth systems for constrained, trust-sensitive markets.</div>
+    </footer>
+  </body>
+</html>
+

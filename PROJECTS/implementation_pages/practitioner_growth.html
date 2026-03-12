@@ -1,0 +1,286 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practitioner Growth | AtlasFlow</title>
+    <meta
+      name="description"
+      content="Patient acquisition systems for doctors, dentists, GPs, chiropractors, and other trust-based local practices."
+    />
+    <style>
+      :root {
+        --bg: #f3f0ea;
+        --ink: #131619;
+        --muted: #545d60;
+        --line: #d1cac1;
+        --brand: #3c4a88;
+        --brand-soft: #edf0ff;
+        --card: #fbf8f3;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 100% 0%, #e8ecff 0%, transparent 39%),
+          radial-gradient(circle at 0% 0%, #f9f4eb 0%, transparent 45%),
+          linear-gradient(180deg, var(--bg) 0%, #faf7f2 100%);
+        line-height: 1.45;
+      }
+
+      .container { width: min(1100px, 92vw); margin: 0 auto; }
+
+      .site-header {
+        border-bottom: 1px solid var(--line);
+        background: color-mix(in srgb, var(--bg) 82%, white 18%);
+      }
+
+      .site-header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.9rem 0;
+      }
+
+      .brand { font-weight: 800; letter-spacing: 0.02em; }
+
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.95rem;
+      }
+
+      nav a { text-decoration: none; color: var(--ink); font-size: 0.95rem; }
+      nav a:hover { color: var(--brand); }
+
+      section { padding: 3rem 0; }
+      .hero { padding-top: 3.9rem; }
+
+      .hero-wrap {
+        border-radius: 1rem;
+        background: linear-gradient(126deg, #3c4a88 0%, #4b5ba0 65%, #5a6cb9 100%);
+        color: #edf1ff;
+        padding: 1.55rem;
+      }
+
+      .eyebrow {
+        text-transform: uppercase;
+        letter-spacing: 0.11em;
+        font-size: 0.75rem;
+        color: #d3dafb;
+      }
+
+      h1, h2, h3 { margin: 0 0 0.8rem; line-height: 1.15; }
+      h1 { font-size: clamp(1.9rem, 4.8vw, 3rem); max-width: 15ch; }
+
+      p { margin: 0 0 1rem; color: var(--muted); }
+      .hero p { color: #dee6ff; }
+
+      .cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+      }
+
+      .btn {
+        display: inline-block;
+        text-decoration: none;
+        padding: 0.72rem 1.12rem;
+        border-radius: 999px;
+        border: 1px solid transparent;
+        font-weight: 700;
+      }
+
+      .btn-primary {
+        background: #f1f3ff;
+        border-color: #f1f3ff;
+        color: #2f3b74;
+      }
+
+      .btn-secondary {
+        border-color: #cad2fb;
+        color: #e8edff;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 1rem;
+      }
+
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 1rem;
+        padding: 1.05rem;
+      }
+
+      ul { margin: 0.55rem 0 0; padding-left: 1.05rem; color: var(--muted); }
+
+      .faq details {
+        border: 1px solid var(--line);
+        border-radius: 0.8rem;
+        background: #fffdf9;
+        padding: 0.85rem;
+        margin-bottom: 0.7rem;
+      }
+
+      .faq summary { font-weight: 700; cursor: pointer; }
+
+      .cta-box {
+        border: 1px solid var(--line);
+        border-radius: 1rem;
+        background: var(--brand-soft);
+        padding: 1.2rem;
+      }
+
+      .site-footer {
+        border-top: 1px solid var(--line);
+        margin-top: 2rem;
+        padding: 1.4rem 0 2rem;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <div class="brand">AtlasFlow</div>
+        <nav aria-label="Primary">
+          <ul>
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="regulated_growth.html">Regulated Growth</a></li>
+            <li><a href="practitioner_growth.html">Practitioner Growth</a></li>
+            <li><a href="compliance_report.html">Compliance Report</a></li>
+            <li><a href="strategy_call.html">Strategy Call</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero-wrap">
+            <p class="eyebrow">Service Lane</p>
+            <h1>Patient Acquisition Systems For Local Practices</h1>
+            <p>
+              AtlasFlow helps doctors, GPs, dentists, chiropractors, and other trust-based practices build clearer
+              inquiry flow, better booking conversion, and more dependable patient growth.
+            </p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="#cta">Book a Practice Growth Call</a>
+              <a class="btn btn-secondary" href="practitioner_growth_audit.html">Start With Practitioner Growth Audit</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2>Why Practice Growth Breaks Down</h2>
+          <p>
+            Many practices are not short on effort. They are short on structure. Patient flow often depends on
+            scattered referrals, weak local visibility, underperforming websites, inconsistent follow-up, or booking
+            paths that create friction.
+          </p>
+          <p>
+            The result is a practice that cannot clearly see where growth is leaking. This lane is designed to fix
+            that.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2>What AtlasFlow Helps With</h2>
+          <div class="card">
+            <ul>
+              <li>Clearer patient acquisition systems</li>
+              <li>Stronger local positioning</li>
+              <li>Landing pages and booking flow</li>
+              <li>Improved inquiry response</li>
+              <li>Cleaner conversion paths from interest to appointment</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2>Who It Is For</h2>
+          <div class="grid">
+            <article class="card"><p>Doctors and general practitioners</p></article>
+            <article class="card"><p>Dentists and chiropractors</p></article>
+            <article class="card"><p>Physicians and specialist local clinics</p></article>
+            <article class="card"><p>Other trust-based local practices</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2>Why AtlasFlow</h2>
+          <p>
+            AtlasFlow focuses on growth in markets where trust matters. For local practices, that means making the
+            patient journey clearer, cleaner, and easier to convert.
+          </p>
+          <h3>How This Connects</h3>
+          <p>This lane supports focused offers including:</p>
+          <ul>
+            <li>Practitioner Growth Audit</li>
+            <li>Lead Response Engine work</li>
+            <li>Broader patient-acquisition support where needed</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="faq">
+        <div class="container">
+          <h2>FAQ</h2>
+          <details open>
+            <summary>What types of practices is this for?</summary>
+            <p>Local trust-based practices such as doctors, dentists, GPs, and chiropractors.</p>
+          </details>
+          <details>
+            <summary>What is the main goal of this work?</summary>
+            <p>To improve inquiry flow, booking conversion, and patient acquisition clarity.</p>
+          </details>
+          <details>
+            <summary>What is the best first step?</summary>
+            <p>Start with the practitioner growth audit if you want a diagnostic first.</p>
+          </details>
+        </div>
+      </section>
+
+      <section id="cta">
+        <div class="container">
+          <div class="cta-box">
+            <h2>If your practice needs a cleaner patient pipeline and better booking conversion, start with a practice growth call.</h2>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="strategy_call.html">Book a Practice Growth Call</a>
+              <a class="btn" style="border-color: #b1bdf7; color: #2f3b74;" href="practitioner_growth_audit.html"
+                >Start With Practitioner Growth Audit</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">AtlasFlow | Practical patient-acquisition systems for local trust-based practices.</div>
+    </footer>
+  </body>
+</html>
+

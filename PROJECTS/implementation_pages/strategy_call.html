@@ -1,0 +1,379 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strategy Call | AtlasFlow</title>
+    <meta
+      name="description"
+      content="A focused strategy and clarity session for operators, founders, and entrants who need a sharper next move."
+    />
+    <style>
+      :root {
+        --bg: #f4f0ea;
+        --ink: #121416;
+        --muted: #52595d;
+        --line: #d4ccc0;
+        --brand: #1d4a64;
+        --brand-soft: #e8f1f7;
+        --card: #fbf8f4;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 0% 0%, #f9f6f0 0%, transparent 44%),
+          radial-gradient(circle at 100% 0%, #e5eef4 0%, transparent 38%),
+          linear-gradient(180deg, var(--bg) 0%, #faf7f2 100%);
+        line-height: 1.45;
+      }
+
+      .container {
+        width: min(1100px, 92vw);
+        margin: 0 auto;
+      }
+
+      .site-header {
+        border-bottom: 1px solid var(--line);
+        background: color-mix(in srgb, var(--bg) 82%, white 18%);
+      }
+
+      .site-header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.9rem 0;
+      }
+
+      .brand {
+        font-weight: 800;
+        letter-spacing: 0.02em;
+      }
+
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.95rem;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: var(--ink);
+        font-size: 0.95rem;
+      }
+
+      nav a:hover {
+        color: var(--brand);
+      }
+
+      section {
+        padding: 3.1rem 0;
+      }
+
+      .hero {
+        padding-top: 4rem;
+      }
+
+      .hero-wrap {
+        background:
+          linear-gradient(125deg, rgba(29, 74, 100, 0.97) 0%, rgba(37, 88, 117, 0.93) 100%);
+        border-radius: 1rem;
+        padding: 1.6rem;
+        color: #eaf3f8;
+      }
+
+      .eyebrow {
+        text-transform: uppercase;
+        letter-spacing: 0.11em;
+        font-size: 0.75rem;
+        color: #c5dce9;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0 0 0.8rem;
+        line-height: 1.15;
+      }
+
+      h1 {
+        font-size: clamp(1.9rem, 4.7vw, 3rem);
+        max-width: 15ch;
+      }
+
+      p {
+        margin: 0 0 1rem;
+        color: var(--muted);
+      }
+
+      .hero p {
+        color: #d6e8f2;
+      }
+
+      .cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+      }
+
+      .btn {
+        display: inline-block;
+        text-decoration: none;
+        padding: 0.72rem 1.12rem;
+        border-radius: 999px;
+        border: 1px solid transparent;
+        font-weight: 700;
+      }
+
+      .btn-primary {
+        background: #edf5fb;
+        border-color: #edf5fb;
+        color: #1b445c;
+      }
+
+      .btn-secondary {
+        color: #edf5fb;
+        border-color: #c2d9e7;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1rem;
+      }
+
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 1rem;
+        padding: 1.05rem;
+      }
+
+      ul {
+        margin: 0.55rem 0 0;
+        padding-left: 1.05rem;
+        color: var(--muted);
+      }
+
+      .faq details {
+        border: 1px solid var(--line);
+        border-radius: 0.8rem;
+        background: #fffdf9;
+        padding: 0.86rem;
+        margin-bottom: 0.7rem;
+      }
+
+      .faq summary {
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      .booking {
+        border: 1px solid var(--line);
+        background: var(--brand-soft);
+        border-radius: 1rem;
+        padding: 1.2rem;
+      }
+
+      form {
+        display: grid;
+        gap: 0.7rem;
+        margin-top: 0.8rem;
+      }
+
+      label {
+        font-weight: 700;
+        font-size: 0.92rem;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        border: 1px solid #b7cddc;
+        border-radius: 0.6rem;
+        padding: 0.68rem;
+        font: inherit;
+        background: #fefefe;
+      }
+
+      textarea {
+        min-height: 90px;
+        resize: vertical;
+      }
+
+      .site-footer {
+        border-top: 1px solid var(--line);
+        margin-top: 2rem;
+        padding: 1.4rem 0 2rem;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <div class="brand">AtlasFlow</div>
+        <nav aria-label="Primary">
+          <ul>
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="regulated_growth.html">Regulated Growth</a></li>
+            <li><a href="practitioner_growth.html">Practitioner Growth</a></li>
+            <li><a href="compliance_report.html">Compliance Report</a></li>
+            <li><a href="strategy_call.html">Strategy Call</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero-wrap">
+            <p class="eyebrow">Direct Clarity Session</p>
+            <h1>A Focused Strategy Call For High-Conviction Decisions</h1>
+            <p>
+              A practical session for founders, operators, practitioners, and entrants who need sharper judgment,
+              clearer framing, and a cleaner next move.
+            </p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="#book">Book the Call</a>
+              <a class="btn btn-secondary" href="compliance_report.html">Start With Compliance Report</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2>Who This Is For</h2>
+          <p>
+            This call is for people who are already serious. You do not need another vague conversation or generic
+            insight. You need a sharper read on your situation and a clearer path through it.
+          </p>
+          <div class="grid">
+            <article class="card"><p>Assessing a cannabis or CBD move</p></article>
+            <article class="card"><p>Navigating a regulated or trust-fragmented market</p></article>
+            <article class="card"><p>Making a difficult positioning or execution decision</p></article>
+            <article class="card"><p>Entering South Africa and needing a cleaner view</p></article>
+            <article class="card"><p>Deciding what to do next before committing time and capital</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2>What Happens On The Call</h2>
+          <div class="card">
+            <ul>
+              <li>Review your current situation</li>
+              <li>Clarify the real decision in front of you</li>
+              <li>Identify constraints, assumptions, and blind spots</li>
+              <li>Define the most important next move</li>
+            </ul>
+            <p style="margin-top: 0.9rem;">
+              This is not a motivational conversation. It is a working session designed to improve decision quality.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2>What You Leave With</h2>
+          <div class="grid">
+            <article class="card"><p>Clearer framing</p></article>
+            <article class="card"><p>Cleaner priorities</p></article>
+            <article class="card"><p>Better understanding of what matters now</p></article>
+            <article class="card"><p>Stronger confidence in the next practical step</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2>Why This Exists</h2>
+          <p>
+            Some situations do not need more content. They need direct interpretation. The point of this call is to
+            shorten confusion, reduce wasted motion, and help you move with more precision.
+          </p>
+          <h3>Why AtlasFlow</h3>
+          <p>
+            AtlasFlow operates in markets where trust, compliance, and positioning matter. The work is about clarity
+            under constraint, not generic growth chatter.
+          </p>
+        </div>
+      </section>
+
+      <section class="faq">
+        <div class="container">
+          <h2>FAQ</h2>
+          <details open>
+            <summary>Who should book this call?</summary>
+            <p>People who already know they need direct clarity, not general content.</p>
+          </details>
+          <details>
+            <summary>What happens on the call?</summary>
+            <p>The session focuses on your situation, the real decision in front of you, and the strongest next move.</p>
+          </details>
+          <details>
+            <summary>Is this the right first step for everyone?</summary>
+            <p>No. If you are earlier in the process, start with the compliance report first.</p>
+          </details>
+        </div>
+      </section>
+
+      <section id="book">
+        <div class="container">
+          <div class="booking">
+            <h2>If the situation needs a sharper read, book the call.</h2>
+            <form>
+              <div>
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" required />
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required />
+              </div>
+              <div>
+                <label for="project">Business / Project</label>
+                <input id="project" name="project" type="text" required />
+              </div>
+              <div>
+                <label for="situation">Current Situation</label>
+                <textarea id="situation" name="situation" required></textarea>
+              </div>
+              <div>
+                <label for="question">Main Question or Decision</label>
+                <textarea id="question" name="question" required></textarea>
+              </div>
+              <div class="cta-row">
+                <button class="btn btn-primary" type="submit">Book the Call</button>
+                <a class="btn" style="border-color: #a8c3d2; color: #173d55;" href="compliance_report.html"
+                  >Start With Compliance Report</a
+                >
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">AtlasFlow | Practical clarity for regulated and trust-based decisions.</div>
+    </footer>
+  </body>
+</html>
+
