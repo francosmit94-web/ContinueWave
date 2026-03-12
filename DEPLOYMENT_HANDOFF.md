@@ -43,7 +43,7 @@ Publish Status
   - Last error: no valid session; login requires interactive browser auth (`vercel login`).
 - GitHub Pages: LIVE
   - Repository: `https://github.com/francosmit94-web/ContinueWave`
-  - Branch/source: `gh-pages` root at commit `bf5f6bf`
+  - Branch/source: `gh-pages` root at commit `82d2229`
   - URL: `https://francosmit94-web.github.io/ContinueWave/`
   - Verification: HTTP 200 for `/`, `/index.html`, `/contact.html`
 
