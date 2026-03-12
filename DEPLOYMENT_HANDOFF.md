@@ -44,7 +44,7 @@ Publish Status
   - Verification: HTTP 200 for `/`, `/index.html`, `/homepage.html`, `/contact.html`
 - GitHub Pages: LIVE
   - Repository: `https://github.com/francosmit94-web/ContinueWave`
-  - Branch/source: `gh-pages` root at commit `e496307`
+  - Branch/source: `gh-pages` root (latest live commit)
   - URL: `https://francosmit94-web.github.io/ContinueWave/`
   - Verification: HTTP 200 for `/`, `/index.html`, `/contact.html`
 
