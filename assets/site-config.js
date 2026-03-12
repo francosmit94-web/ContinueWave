@@ -1,14 +1,19 @@
 ﻿window.ATLASFLOW_CONFIG = {
   canonicalOrigin: "https://implementationpages.vercel.app",
   redirectToCanonical: false,
-  fallbackEmail: "hello@atlasflow.co.za",
+  fallbackEmail: "francosmit94@gmail.com",
   forms: {
-    contactEndpoint: "",
-    newsletterEndpoint: "",
-    strategyCallEndpoint: ""
+    contactEndpoint: "https://formsubmit.co/ajax/francosmit94@gmail.com",
+    newsletterEndpoint: "https://formsubmit.co/ajax/francosmit94@gmail.com",
+    strategyCallEndpoint: "https://formsubmit.co/ajax/francosmit94@gmail.com",
+    subjectByType: {
+      contact: "AtlasFlow Contact Inquiry",
+      newsletter: "AtlasFlow Newsletter Signup",
+      strategy_call: "AtlasFlow Strategy Call Request"
+    }
   },
   analytics: {
     gaMeasurementId: "",
-    debug: false
+    debug: true
   }
 };

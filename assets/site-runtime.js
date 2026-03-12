@@ -78,6 +78,22 @@
     return "";
   }
 
+  function buildProviderPayload(formType, fields) {
+    const forms = config.forms || {};
+    const subjectMap = forms.subjectByType || {};
+    const subject = subjectMap[formType] || `AtlasFlow ${formType} submission`;
+    const merged = {
+      ...fields,
+      form_type: formType,
+      page_path: window.location.pathname,
+      submitted_at: new Date().toISOString(),
+      _subject: subject,
+      _captcha: "false",
+      _template: "table",
+    };
+    return merged;
+  }
+
   async function handleFormSubmit(event) {
     event.preventDefault();
     const form = event.currentTarget;
@@ -90,12 +106,8 @@
 
     const endpoint = formTypeToEndpoint(formType);
     const data = new FormData(form);
-    const payload = {
-      formType,
-      page: window.location.pathname,
-      submittedAt: new Date().toISOString(),
-      fields: Object.fromEntries(data.entries()),
-    };
+    const fields = Object.fromEntries(data.entries());
+    const payload = buildProviderPayload(formType, fields);
 
     track("form_submit_attempt", { form_type: formType, page_path: window.location.pathname });
 
@@ -112,7 +124,10 @@
     try {
       const response = await fetch(endpoint, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
         body: JSON.stringify(payload),
       });
       if (!response.ok) {
