@@ -30,21 +30,21 @@ QA Status
   - CTA/link consistency pass complete
 
 Known Gaps
-- pages are static HTML artifacts only (no backend/form processing wired)
-- final production URL routing and analytics wiring are not configured in this workspace
+- pages are static HTML artifacts with client-side form wiring, but production endpoints are still placeholders in `assets/site-config.js`
+- analytics event hooks are wired, but GA4 is inactive until `analytics.gaMeasurementId` is set in `assets/site-config.js`
 
 Publish Status
 - Netlify: LIVE
   - Production: `https://atlasflow-v1-static-20260312.netlify.app`
-  - Unique deploy URL: `https://69b330645c9fc2441383ad84--atlasflow-v1-static-20260312.netlify.app`
+  - Unique deploy URL: `https://69b344a7ccbae5971fc9f67b--atlasflow-v1-static-20260312.netlify.app`
   - Verification: HTTP 200 for `/`, `/index.html`, `/homepage.html`, `/contact.html`
 - Vercel: LIVE
   - Production: `https://implementationpages.vercel.app`
-  - Inspect URL: `https://vercel.com/francosmit94-7829s-projects/implementation_pages/5Z4yKnKoXGPuYyixWahrt5SyzPbc`
+  - Inspect URL: `https://vercel.com/francosmit94-7829s-projects/implementation_pages/CDR7Ph2nDyb936UbnAZ18cADGjUx`
   - Verification: HTTP 200 for `/`, `/index.html`, `/homepage.html`, `/contact.html`
 - GitHub Pages: LIVE
   - Repository: `https://github.com/francosmit94-web/ContinueWave`
-  - Branch/source: `gh-pages` root at commit `7a37b18`
+  - Branch/source: `gh-pages` root at commit `e496307`
   - URL: `https://francosmit94-web.github.io/ContinueWave/`
   - Verification: HTTP 200 for `/`, `/index.html`, `/contact.html`
 
@@ -55,4 +55,4 @@ Deployment Notes
 - map "book call" CTA targets to production scheduling URL if required
 
 Next Move
-- run a final UX/content QA sweep across all three live endpoints and then connect form endpoints for production capture
+- set real form endpoints and GA4 Measurement ID in `assets/site-config.js`, redeploy once, and validate live submissions/events
