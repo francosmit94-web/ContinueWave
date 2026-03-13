@@ -28,6 +28,7 @@
   function setupAnalytics() {
     const analytics = config.analytics || {};
     const measurementId = analytics.gaMeasurementId || "";
+    const debugMode = analytics.debug === true;
     if (!measurementId) return;
 
     window.dataLayer = window.dataLayer || [];
@@ -44,15 +45,22 @@
     }
 
     window.gtag("js", new Date());
-    window.gtag("config", measurementId, { anonymize_ip: true });
+    window.gtag("config", measurementId, {
+      anonymize_ip: true,
+      debug_mode: debugMode,
+    });
   }
 
   function track(eventName, params) {
-    const payload = params || {};
+    const analytics = config.analytics || {};
+    const payload = { ...(params || {}) };
+    if (analytics.debug === true) {
+      payload.debug_mode = true;
+    }
     if (typeof window.gtag === "function") {
       window.gtag("event", eventName, payload);
     }
-    if ((config.analytics || {}).debug) {
+    if (analytics.debug) {
       console.log("[atlasflow-track]", eventName, payload);
     }
   }
