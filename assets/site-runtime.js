@@ -94,6 +94,30 @@
     return merged;
   }
 
+  async function readJsonSafe(response) {
+    try {
+      return await response.json();
+    } catch (error) {
+      return null;
+    }
+  }
+
+  function normalizeProviderSuccess(json) {
+    if (!json || typeof json !== "object" || !("success" in json)) {
+      return null;
+    }
+    const value = json.success;
+    if (typeof value === "boolean") return value;
+    if (typeof value === "string") return value.trim().toLowerCase() === "true";
+    if (typeof value === "number") return value > 0;
+    return null;
+  }
+
+  function isActivationRequiredMessage(message) {
+    const text = String(message || "").toLowerCase();
+    return text.includes("needs activation") || text.includes("requires activation");
+  }
+
   async function handleFormSubmit(event) {
     event.preventDefault();
     const form = event.currentTarget;
@@ -130,19 +154,37 @@
         },
         body: JSON.stringify(payload),
       });
+      const providerJson = await readJsonSafe(response);
       if (!response.ok) {
         throw new Error(`HTTP ${response.status}`);
+      }
+      const providerSuccess = normalizeProviderSuccess(providerJson);
+      const providerMessage = providerJson && typeof providerJson.message === "string"
+        ? providerJson.message.trim()
+        : "";
+      if (providerSuccess === false) {
+        if (isActivationRequiredMessage(providerMessage)) {
+          showFormStatus(
+            form,
+            "error",
+            `Submission is waiting for provider activation. Please email ${(config.fallbackEmail || "the support address")} until activation is complete.`
+          );
+          track("form_submit_blocked", { form_type: formType, reason: "provider_activation" });
+          return;
+        }
+        throw new Error(providerMessage || "Provider rejected the submission.");
       }
       form.reset();
       showFormStatus(form, "ok", "Thanks. Your submission has been received.");
       track("form_submit_success", { form_type: formType, page_path: window.location.pathname });
     } catch (error) {
+      const reason = error instanceof Error && error.message ? error.message : "unknown_error";
       showFormStatus(
         form,
         "error",
         `Could not submit right now. Please email ${(config.fallbackEmail || "the support address")}.`
       );
-      track("form_submit_error", { form_type: formType, page_path: window.location.pathname });
+      track("form_submit_error", { form_type: formType, page_path: window.location.pathname, reason });
     }
   }
 
