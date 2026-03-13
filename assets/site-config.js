@@ -13,7 +13,7 @@
     }
   },
   analytics: {
-    gaMeasurementId: "",
+    gaMeasurementId: "G-EGX6W6THK5",
     debug: true
   }
 };
