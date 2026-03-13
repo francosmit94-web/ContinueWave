@@ -6,6 +6,7 @@
     gtagConfigured: false,
     eventsSent: 0,
     lastEvent: "none",
+    lastBeacon: "none",
     panel: null,
   };
 
@@ -44,7 +45,55 @@
     if (!content) return;
     const status = analyticsState.gtagConfigured ? "ready" : "not-ready";
     content.textContent =
-      `GA status: ${status} | ID: ${analyticsState.measurementId || "unset"} | events: ${analyticsState.eventsSent} | last: ${analyticsState.lastEvent}`;
+      `GA status: ${status} | ID: ${analyticsState.measurementId || "unset"} | events: ${analyticsState.eventsSent} | last: ${analyticsState.lastEvent} | beacon: ${analyticsState.lastBeacon}`;
+  }
+
+  function getOrCreateClientId() {
+    const key = "atlasflow_ga_cid";
+    try {
+      const existing = window.localStorage.getItem(key);
+      if (existing) return existing;
+      const created = `${Date.now()}.${Math.floor(Math.random() * 1e9)}`;
+      window.localStorage.setItem(key, created);
+      return created;
+    } catch (error) {
+      return `${Date.now()}.${Math.floor(Math.random() * 1e9)}`;
+    }
+  }
+
+  function sendDebugCollectBeacon(eventName) {
+    if (!analyticsState.measurementId) {
+      analyticsState.lastBeacon = "no_measurement_id";
+      updateGaPanel();
+      return false;
+    }
+    const params = new URLSearchParams({
+      v: "2",
+      tid: analyticsState.measurementId,
+      cid: getOrCreateClientId(),
+      en: eventName,
+      dl: window.location.href,
+      dt: document.title,
+      ul: navigator.language || "en-us",
+      "ep.debug_mode": "1",
+      "ep.page_path": window.location.pathname,
+    });
+    const url = `https://www.google-analytics.com/g/collect?${params.toString()}`;
+    let sent = false;
+    try {
+      if (typeof navigator.sendBeacon === "function") {
+        sent = navigator.sendBeacon(url);
+      } else {
+        fetch(url, { method: "GET", mode: "no-cors", keepalive: true });
+        sent = true;
+      }
+      analyticsState.lastBeacon = sent ? "sent" : "blocked";
+    } catch (error) {
+      analyticsState.lastBeacon = "error";
+      sent = false;
+    }
+    updateGaPanel();
+    return sent;
   }
 
   function ensureGaPanel() {
@@ -74,6 +123,7 @@
     if (ping) {
       ping.addEventListener("click", function () {
         track("cw_debug_ping", { source: "ga_debug_panel", page_path: window.location.pathname });
+        sendDebugCollectBeacon("cw_debug_ping_beacon");
       });
     }
     analyticsState.panel = panel;
@@ -140,7 +190,11 @@
           gtagConfigured: analyticsState.gtagConfigured,
           eventsSent: analyticsState.eventsSent,
           lastEvent: analyticsState.lastEvent,
+          lastBeacon: analyticsState.lastBeacon,
         };
+      },
+      beaconPing: function () {
+        return sendDebugCollectBeacon("cw_debug_ping_beacon_console");
       },
     };
   }
