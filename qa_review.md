@@ -14,6 +14,7 @@ Checks Run
 - typed form wiring present on all forms (`contact`, `newsletter`, `strategy_call`)
 - all local `.html` links resolve in both directories
 - deployed `assets/site-config.js` checked on Netlify, Vercel, and GitHub Pages
+- deployed `assets/site-runtime.js` checked on Netlify, Vercel, and GitHub Pages for activation-guard marker (`provider_activation`)
 
 Results
 - PASS: page set is complete and mirrored across root + `PROJECTS/implementation_pages`
@@ -21,12 +22,14 @@ Results
 - PASS: 3/3 forms are wired to runtime submission handlers
 - PASS: no broken local `.html` links detected
 - PASS: production form endpoint config live on all 3 hosts (`formsubmit.co/ajax/francosmit94@gmail.com`)
+- PASS: runtime guard update is live on all 3 hosts and prevents false-success on provider `success:false`
 
 Notes
 - Form submission endpoint now points to FormSubmit (`francosmit94@gmail.com`) for contact/newsletter/strategy-call flows.
-- Live endpoint smoke tests currently return `This form needs Activation` until the email activation link is clicked.
-- Analytics event hooks are active, but GA4 remains inactive until `analytics.gaMeasurementId` is set in `assets/site-config.js`.
+- Production-like endpoint smoke test (with `Origin` + `Referer`) is active and returning successful submissions.
+- Production-origin smoke checks now return `success:true` for `contact`, `newsletter`, and `strategy_call`.
+- GA4 Measurement ID `G-EGX6W6THK5` is configured in `assets/site-config.js` and deployed on all three hosts; Realtime/DebugView confirmation is still pending.
 - Canonical host is set to `https://implementationpages.vercel.app` with optional redirect toggle.
 
 Next Move
-- click FormSubmit activation email, set GA4 Measurement ID, then run one live submission + event validation per form.
+- run GA Realtime/DebugView validation for page, CTA, and form success events on production pages.
