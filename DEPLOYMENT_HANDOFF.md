@@ -30,7 +30,7 @@ QA Status
   - CTA/link consistency pass complete
 
 Known Gaps
-- pages are static HTML artifacts with client-side form wiring, but production endpoints are still placeholders in `assets/site-config.js`
+- production form endpoints are configured, but FormSubmit activation is still pending (current API response: `This form needs Activation`)
 - analytics event hooks are wired, but GA4 is inactive until `analytics.gaMeasurementId` is set in `assets/site-config.js`
 
 Publish Status
@@ -40,7 +40,7 @@ Publish Status
   - Verification: HTTP 200 for `/`, `/index.html`, `/homepage.html`, `/contact.html`
 - Vercel: LIVE
   - Production: `https://implementationpages.vercel.app`
-  - Inspect URL: `https://vercel.com/francosmit94-7829s-projects/implementation_pages/CDR7Ph2nDyb936UbnAZ18cADGjUx`
+  - Inspect URL: `https://vercel.com/francosmit94-7829s-projects/implementation_pages/2WfvUZGAu7D7ELg762fxcRExZz3R`
   - Verification: HTTP 200 for `/`, `/index.html`, `/homepage.html`, `/contact.html`
 - GitHub Pages: LIVE
   - Repository: `https://github.com/francosmit94-web/ContinueWave`
@@ -55,4 +55,4 @@ Deployment Notes
 - map "book call" CTA targets to production scheduling URL if required
 
 Next Move
-- set real form endpoints and GA4 Measurement ID in `assets/site-config.js`, redeploy once, and validate live submissions/events
+- click FormSubmit activation email, set GA4 Measurement ID in `assets/site-config.js`, then validate successful live submissions/events

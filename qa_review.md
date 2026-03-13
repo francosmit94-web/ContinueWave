@@ -13,17 +13,20 @@ Checks Run
 - runtime/config scripts present on all pages (`assets/site-runtime.js`, `assets/site-config.js`)
 - typed form wiring present on all forms (`contact`, `newsletter`, `strategy_call`)
 - all local `.html` links resolve in both directories
+- deployed `assets/site-config.js` checked on Netlify, Vercel, and GitHub Pages
 
 Results
 - PASS: page set is complete and mirrored across root + `PROJECTS/implementation_pages`
 - PASS: canonical and runtime instrumentation present on 12/12 pages in both locations
 - PASS: 3/3 forms are wired to runtime submission handlers
 - PASS: no broken local `.html` links detected
+- PASS: production form endpoint config live on all 3 hosts (`formsubmit.co/ajax/francosmit94@gmail.com`)
 
 Notes
-- Form submission endpoints are now configurable via `assets/site-config.js`.
-- Analytics is wired and ready; set `analytics.gaMeasurementId` in `assets/site-config.js` to activate GA4.
+- Form submission endpoint now points to FormSubmit (`francosmit94@gmail.com`) for contact/newsletter/strategy-call flows.
+- Live endpoint smoke tests currently return `This form needs Activation` until the email activation link is clicked.
+- Analytics event hooks are active, but GA4 remains inactive until `analytics.gaMeasurementId` is set in `assets/site-config.js`.
 - Canonical host is set to `https://implementationpages.vercel.app` with optional redirect toggle.
 
 Next Move
-- populate real form endpoint URLs in `assets/site-config.js`, then run one live submission test per form.
+- click FormSubmit activation email, set GA4 Measurement ID, then run one live submission + event validation per form.
