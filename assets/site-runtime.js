@@ -1,6 +1,13 @@
-﻿(function () {
+(function () {
   const config = window.ATLASFLOW_CONFIG || {};
   const canonicalOrigin = (config.canonicalOrigin || "").replace(/\/$/, "");
+  const analyticsState = {
+    measurementId: "",
+    gtagConfigured: false,
+    eventsSent: 0,
+    lastEvent: "none",
+    panel: null,
+  };
 
   function ensureCanonical() {
     if (!canonicalOrigin) return;
@@ -25,11 +32,63 @@
     }
   }
 
+  function shouldShowGaPanel() {
+    const analytics = config.analytics || {};
+    const search = new URLSearchParams(window.location.search);
+    return analytics.debugPanel === true || search.get("ga_debug") === "1";
+  }
+
+  function updateGaPanel() {
+    if (!analyticsState.panel) return;
+    const content = analyticsState.panel.querySelector("[data-ga-panel-content]");
+    if (!content) return;
+    const status = analyticsState.gtagConfigured ? "ready" : "not-ready";
+    content.textContent =
+      `GA status: ${status} | ID: ${analyticsState.measurementId || "unset"} | events: ${analyticsState.eventsSent} | last: ${analyticsState.lastEvent}`;
+  }
+
+  function ensureGaPanel() {
+    if (!shouldShowGaPanel() || analyticsState.panel) return;
+    const panel = document.createElement("aside");
+    panel.style.position = "fixed";
+    panel.style.bottom = "12px";
+    panel.style.right = "12px";
+    panel.style.zIndex = "99999";
+    panel.style.maxWidth = "420px";
+    panel.style.background = "#102431";
+    panel.style.color = "#f2f7fa";
+    panel.style.padding = "12px";
+    panel.style.border = "1px solid #255972";
+    panel.style.borderRadius = "10px";
+    panel.style.fontFamily = "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace";
+    panel.style.fontSize = "12px";
+    panel.innerHTML = `
+      <strong style="display:block; margin-bottom:6px;">AtlasFlow GA Debug</strong>
+      <div data-ga-panel-content style="line-height:1.45; margin-bottom:8px;">Initializing...</div>
+      <button type="button" data-ga-panel-ping style="padding:6px 10px; border:0; border-radius:6px; background:#2f8bb8; color:#fff; cursor:pointer;">
+        Send test event
+      </button>
+    `;
+    document.body.appendChild(panel);
+    const ping = panel.querySelector("[data-ga-panel-ping]");
+    if (ping) {
+      ping.addEventListener("click", function () {
+        track("cw_debug_ping", { source: "ga_debug_panel", page_path: window.location.pathname });
+      });
+    }
+    analyticsState.panel = panel;
+    updateGaPanel();
+  }
+
   function setupAnalytics() {
     const analytics = config.analytics || {};
     const measurementId = analytics.gaMeasurementId || "";
     const debugMode = analytics.debug === true;
-    if (!measurementId) return;
+    analyticsState.measurementId = measurementId;
+    if (!measurementId) {
+      updateGaPanel();
+      return;
+    }
 
     window.dataLayer = window.dataLayer || [];
     window.gtag = window.gtag || function () {
@@ -49,6 +108,8 @@
       anonymize_ip: true,
       debug_mode: debugMode,
     });
+    analyticsState.gtagConfigured = true;
+    updateGaPanel();
   }
 
   function track(eventName, params) {
@@ -60,9 +121,28 @@
     if (typeof window.gtag === "function") {
       window.gtag("event", eventName, payload);
     }
+    analyticsState.eventsSent += 1;
+    analyticsState.lastEvent = eventName;
+    updateGaPanel();
     if (analytics.debug) {
       console.log("[atlasflow-track]", eventName, payload);
     }
+  }
+
+  function exposeDebugApi() {
+    window.ATLASFLOW_DEBUG = {
+      track: function (eventName, params) {
+        track(eventName, params || {});
+      },
+      analyticsStatus: function () {
+        return {
+          measurementId: analyticsState.measurementId,
+          gtagConfigured: analyticsState.gtagConfigured,
+          eventsSent: analyticsState.eventsSent,
+          lastEvent: analyticsState.lastEvent,
+        };
+      },
+    };
   }
 
   function showFormStatus(form, kind, message) {
@@ -111,7 +191,7 @@
   }
 
   function normalizeProviderSuccess(json) {
-    if (!json || typeof json !== "object" || !("success" in json)) {
+    if (!json || typeof json !== "object" || !('success' in json)) {
       return null;
     }
     const value = json.success;
@@ -215,6 +295,8 @@
     });
   }
 
+  exposeDebugApi();
+  ensureGaPanel();
   setupAnalytics();
   ensureCanonical();
   setupForms();
