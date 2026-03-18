@@ -3,9 +3,10 @@
   redirectToCanonical: false,
   fallbackEmail: "francosmit94@gmail.com",
   forms: {
-    contactEndpoint: "https://formsubmit.co/ajax/francosmit94@gmail.com",
-    newsletterEndpoint: "https://formsubmit.co/ajax/francosmit94@gmail.com",
-    strategyCallEndpoint: "https://formsubmit.co/ajax/francosmit94@gmail.com",
+    mode: "email_fallback",
+    contactEndpoint: "/api/form-submit",
+    newsletterEndpoint: "/api/form-submit",
+    strategyCallEndpoint: "/api/form-submit",
     subjectByType: {
       contact: "AtlasFlow Contact Inquiry",
       newsletter: "AtlasFlow Newsletter Signup",

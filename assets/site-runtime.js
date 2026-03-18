@@ -255,9 +255,21 @@
     return null;
   }
 
-  function isActivationRequiredMessage(message) {
-    const text = String(message || "").toLowerCase();
-    return text.includes("needs activation") || text.includes("requires activation");
+  function extractProviderMessage(json) {
+    if (!json || typeof json !== "object") return "";
+    if (typeof json.message === "string") return json.message.trim();
+    if (typeof json.error === "string") return json.error.trim();
+    return "";
+  }
+
+  function buildMailtoHref(formType, payload) {
+    const fallbackEmail = config.fallbackEmail || "";
+    const subject = payload._subject || `AtlasFlow ${formType} inquiry`;
+    const lines = Object.entries(payload)
+      .filter(([key]) => !key.startsWith("_"))
+      .map(([key, value]) => `${key}: ${value}`);
+    const body = lines.join("\n");
+    return `mailto:${encodeURIComponent(fallbackEmail)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   }
 
   async function handleFormSubmit(event) {
@@ -270,12 +282,24 @@
       return;
     }
 
-    const endpoint = formTypeToEndpoint(formType);
     const data = new FormData(form);
     const fields = Object.fromEntries(data.entries());
     const payload = buildProviderPayload(formType, fields);
+    const endpoint = formTypeToEndpoint(formType);
+    const formsConfig = config.forms || {};
 
     track("form_submit_attempt", { form_type: formType, page_path: window.location.pathname });
+
+    if (formsConfig.mode === "email_fallback") {
+      showFormStatus(
+        form,
+        "error",
+        `Live form backend is temporarily offline. Opening your email client instead. If nothing opens, email ${(config.fallbackEmail || "the support address")} directly.`
+      );
+      track("form_submit_blocked", { form_type: formType, reason: "email_fallback" });
+      window.location.href = buildMailtoHref(formType, payload);
+      return;
+    }
 
     if (!endpoint) {
       showFormStatus(
@@ -298,22 +322,12 @@
       });
       const providerJson = await readJsonSafe(response);
       if (!response.ok) {
-        throw new Error(`HTTP ${response.status}`);
+        const providerMessage = extractProviderMessage(providerJson);
+        throw new Error(providerMessage || `HTTP ${response.status}`);
       }
       const providerSuccess = normalizeProviderSuccess(providerJson);
-      const providerMessage = providerJson && typeof providerJson.message === "string"
-        ? providerJson.message.trim()
-        : "";
+      const providerMessage = extractProviderMessage(providerJson);
       if (providerSuccess === false) {
-        if (isActivationRequiredMessage(providerMessage)) {
-          showFormStatus(
-            form,
-            "error",
-            `Submission is waiting for provider activation. Please email ${(config.fallbackEmail || "the support address")} until activation is complete.`
-          );
-          track("form_submit_blocked", { form_type: formType, reason: "provider_activation" });
-          return;
-        }
         throw new Error(providerMessage || "Provider rejected the submission.");
       }
       form.reset();
