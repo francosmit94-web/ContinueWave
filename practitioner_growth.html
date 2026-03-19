@@ -3,21 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Practitioner Growth Audit | AtlasFlow</title>
+    <title>Practitioner Growth | AtlasFlow</title>
     <meta
       name="description"
-      content="A clearer patient growth path for doctors, dentists, GPs, chiropractors, and other trust-based local practices."
+      content="A clearer growth path for doctors, dentists, wellness practitioners, local clinics, and other trust-based practices."
     />
     <link rel="canonical" href="https://implementationpages.vercel.app/practitioner_growth.html" />
     <style>
       :root {
-        --bg: #f3f0ea;
+        --bg: #efe9df;
         --ink: #131619;
         --muted: #545d60;
         --line: #d1cac1;
-        --brand: #3c4a88;
-        --brand-soft: #edf0ff;
-        --card: #fbf8f3;
+        --brand: #38478a;
+        --brand-soft: #ecf0ff;
+        --accent: #c26f2a;
+        --card: #fffaf4;
+        --shadow: 0 22px 52px rgba(19, 22, 24, 0.1);
       }
 
       * { box-sizing: border-box; }
@@ -27,9 +29,10 @@
         font-family: "Trebuchet MS", "Segoe UI", sans-serif;
         color: var(--ink);
         background:
-          radial-gradient(circle at 100% 0%, #e8ecff 0%, transparent 39%),
-          radial-gradient(circle at 0% 0%, #f9f4eb 0%, transparent 45%),
-          linear-gradient(180deg, var(--bg) 0%, #faf7f2 100%);
+          radial-gradient(circle at 92% 4%, rgba(214, 221, 255, 0.92) 0%, transparent 32%),
+          radial-gradient(circle at 8% 12%, rgba(255, 248, 236, 0.96) 0%, transparent 34%),
+          radial-gradient(circle at 84% 80%, rgba(229, 205, 170, 0.42) 0%, transparent 24%),
+          linear-gradient(180deg, var(--bg) 0%, #faf6ef 100%);
         line-height: 1.45;
       }
 
@@ -66,10 +69,12 @@
       .hero { padding-top: 3.9rem; }
 
       .hero-wrap {
-        border-radius: 1rem;
-        background: linear-gradient(126deg, #3c4a88 0%, #4b5ba0 65%, #5a6cb9 100%);
+        border-radius: 1.35rem;
+        background:
+          linear-gradient(135deg, rgba(26, 34, 71, 0.96) 0%, rgba(56, 71, 138, 0.95) 58%, rgba(95, 112, 197, 0.9) 100%);
         color: #edf1ff;
-        padding: 1.55rem;
+        padding: 1.7rem;
+        box-shadow: var(--shadow);
       }
 
       .eyebrow {
@@ -80,7 +85,11 @@
       }
 
       h1, h2, h3 { margin: 0 0 0.8rem; line-height: 1.15; }
-      h1 { font-size: clamp(1.9rem, 4.8vw, 3rem); max-width: 15ch; }
+      h1 {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(2.15rem, 5vw, 3.45rem);
+        max-width: 13ch;
+      }
 
       p { margin: 0 0 1rem; color: var(--muted); }
       .hero p { color: #dee6ff; }
@@ -111,6 +120,12 @@
         color: #e8edff;
       }
 
+      .btn-accent {
+        background: var(--accent);
+        border-color: var(--accent);
+        color: #1d140c;
+      }
+
       .grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -120,8 +135,9 @@
       .card {
         background: var(--card);
         border: 1px solid var(--line);
-        border-radius: 1rem;
-        padding: 1.05rem;
+        border-radius: 1.15rem;
+        padding: 1.1rem;
+        box-shadow: 0 18px 38px rgba(19, 22, 24, 0.06);
       }
 
       ul { margin: 0.55rem 0 0; padding-left: 1.05rem; color: var(--muted); }
@@ -138,9 +154,10 @@
 
       .cta-box {
         border: 1px solid var(--line);
-        border-radius: 1rem;
+        border-radius: 1.2rem;
         background: var(--brand-soft);
-        padding: 1.2rem;
+        padding: 1.3rem;
+        box-shadow: var(--shadow);
       }
 
       .site-footer {
@@ -149,6 +166,24 @@
         padding: 1.4rem 0 2rem;
         color: var(--muted);
         font-size: 0.92rem;
+      }
+
+      .badge-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.55rem;
+        margin: 1rem 0 1.05rem;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.42rem 0.72rem;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        color: #edf1ff;
+        font-size: 0.84rem;
       }
     </style>
   </head>
@@ -174,13 +209,21 @@
         <div class="container">
           <div class="hero-wrap">
             <p class="eyebrow">Service Lane</p>
-            <h1>Find Where Your Patient Growth Is Breaking Down</h1>
+            <h1>Find Where Your Practice Growth Is Breaking Down</h1>
             <p>
-              AtlasFlow helps doctors, GPs, dentists, chiropractors, and other trust-based practices diagnose weak
-              inquiry flow, booking friction, and the patient acquisition gaps that keep growth inconsistent.
+              AtlasFlow helps doctors, dentists, wellness practitioners, clinics, and other trust-based practices
+              diagnose weak inquiry flow, booking friction, and the patient or client acquisition gaps that keep
+              growth inconsistent.
             </p>
+            <div class="badge-row">
+              <span class="badge">Doctors</span>
+              <span class="badge">Dentists</span>
+              <span class="badge">Clinics</span>
+              <span class="badge">Wellness</span>
+              <span class="badge">Trust-Based Operators</span>
+            </div>
             <div class="cta-row">
-              <a class="btn btn-primary" href="practitioner_growth_audit.html">Start With The Growth Audit</a>
+              <a class="btn btn-accent" href="practitioner_growth_audit.html">Start With The Growth Audit</a>
               <a class="btn btn-secondary" href="strategy_call.html">Book a Practice Growth Call</a>
             </div>
           </div>
@@ -192,7 +235,7 @@
           <h2>Why Practice Growth Breaks Down</h2>
           <p>
             Most practices do not need more scattered marketing activity. They need a clearer diagnosis of why new
-            patient demand is weak, where inquiries are leaking, and why bookings do not convert reliably.
+            patient or client demand is weak, where inquiries are leaking, and why bookings do not convert reliably.
           </p>
           <p>
             That is why the right first step is usually the audit, not a broad call. It gives you a cleaner read on
@@ -219,9 +262,9 @@
         <div class="container">
           <h2>Who It Is For</h2>
           <div class="grid">
-            <article class="card"><p>Doctors and general practitioners</p></article>
-            <article class="card"><p>Dentists and chiropractors</p></article>
-            <article class="card"><p>Physicians and specialist local clinics</p></article>
+            <article class="card"><p>Doctors, GPs, and specialist clinics</p></article>
+            <article class="card"><p>Dentists, orthodontists, and chiropractors</p></article>
+            <article class="card"><p>Wellness practitioners, aesthetic clinics, and therapy-led practices</p></article>
             <article class="card"><p>Other trust-based local practices</p></article>
           </div>
         </div>
@@ -281,7 +324,7 @@
           <h2>FAQ</h2>
           <details open>
             <summary>What types of practices is this for?</summary>
-            <p>Local trust-based practices such as doctors, dentists, GPs, and chiropractors.</p>
+            <p>Local trust-based practices such as doctors, dentists, wellness practitioners, clinics, and other operators who depend on trust to convert demand.</p>
           </details>
           <details>
             <summary>What is the main goal of this work?</summary>
@@ -313,7 +356,7 @@
     </main>
 
     <footer class="site-footer">
-      <div class="container">AtlasFlow | Practical patient-acquisition systems for local trust-based practices.</div>
+      <div class="container">AtlasFlow | Practical patient and client acquisition systems for local trust-based practices.</div>
     </footer>
       <script src="assets/site-config.js" defer></script>
     <script src="assets/site-runtime.js" defer></script>

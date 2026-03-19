@@ -3,22 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AtlasFlow | Clearer Growth For Regulated Brands And Trust-Based Practices</title>
+    <title>AtlasFlow | Growth For Cannabis, Wellness, And Trust-Based Practices</title>
     <meta
       name="description"
-      content="AtlasFlow helps regulated brands and trust-based practices fix positioning, improve conversion paths, and make the next growth move clearer."
+      content="AtlasFlow helps cannabis, CBD, wellness, and other regulated brands alongside doctors, dentists, and trust-based practices build clearer growth paths."
     />
     <link rel="canonical" href="https://implementationpages.vercel.app/homepage.html" />
     <style>
       :root {
-        --bg: #f5f2ec;
-        --bg-soft: #efe9de;
-        --ink: #111212;
-        --muted: #4f5453;
-        --brand: #145743;
+        --bg: #efe6d8;
+        --bg-soft: #f7f1e6;
+        --ink: #121416;
+        --muted: #4e5659;
+        --brand: #0f5a43;
         --brand-ink: #ffffff;
-        --line: #d6d0c4;
-        --card: #fbf8f2;
+        --accent: #d57a2a;
+        --accent-soft: #f4dfc7;
+        --line: #d0c4b4;
+        --card: #fffaf2;
+        --shadow: 0 24px 60px rgba(18, 20, 22, 0.12);
       }
 
       * {
@@ -30,9 +33,10 @@
         font-family: "Trebuchet MS", "Segoe UI", sans-serif;
         color: var(--ink);
         background:
-          radial-gradient(circle at 10% 10%, #fdf9f1 0%, transparent 45%),
-          radial-gradient(circle at 90% 0%, #e8f0ea 0%, transparent 42%),
-          linear-gradient(180deg, var(--bg) 0%, #f8f6f1 100%);
+          radial-gradient(circle at 12% 14%, rgba(255, 247, 233, 0.95) 0%, transparent 36%),
+          radial-gradient(circle at 88% 6%, rgba(195, 228, 211, 0.78) 0%, transparent 34%),
+          radial-gradient(circle at 78% 78%, rgba(227, 202, 170, 0.45) 0%, transparent 26%),
+          linear-gradient(180deg, var(--bg) 0%, #f8f4ec 100%);
         line-height: 1.45;
       }
 
@@ -60,6 +64,7 @@
       .brand {
         font-weight: 800;
         letter-spacing: 0.02em;
+        font-size: 1.05rem;
       }
 
       nav ul {
@@ -86,7 +91,7 @@
       }
 
       .hero {
-        padding-top: 4.2rem;
+        padding-top: 4.4rem;
       }
 
       .eyebrow {
@@ -104,8 +109,9 @@
       }
 
       h1 {
-        font-size: clamp(2rem, 5vw, 3.35rem);
-        max-width: 14ch;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(2.35rem, 5.5vw, 4.3rem);
+        max-width: 11ch;
       }
 
       p {
@@ -115,7 +121,110 @@
 
       .lead {
         max-width: 62ch;
-        font-size: 1.06rem;
+        font-size: 1.08rem;
+      }
+
+      .hero-shell {
+        display: grid;
+        grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.9fr);
+        gap: 1.2rem;
+        align-items: stretch;
+      }
+
+      .hero-main,
+      .hero-side {
+        border-radius: 1.4rem;
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        box-shadow: var(--shadow);
+      }
+
+      .hero-main {
+        padding: 1.6rem;
+        color: #eef7f1;
+        background:
+          linear-gradient(140deg, rgba(8, 33, 25, 0.94) 0%, rgba(15, 90, 67, 0.93) 58%, rgba(31, 115, 88, 0.9) 100%);
+      }
+
+      .hero-main .eyebrow,
+      .hero-main p {
+        color: #dcece4;
+      }
+
+      .hero-side {
+        padding: 1.3rem;
+        background:
+          linear-gradient(180deg, rgba(255, 249, 239, 0.96) 0%, rgba(246, 237, 223, 0.96) 100%);
+      }
+
+      .hero-side h2 {
+        font-size: 1.15rem;
+      }
+
+      .hero-side p {
+        color: var(--muted);
+      }
+
+      .chip-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.55rem;
+        margin: 1rem 0 0.9rem;
+      }
+
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.42rem 0.7rem;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        background: rgba(255, 255, 255, 0.08);
+        color: #edf6f1;
+        font-size: 0.84rem;
+        letter-spacing: 0.01em;
+      }
+
+      .signal-stack {
+        display: grid;
+        gap: 0.8rem;
+        margin-top: 0.9rem;
+      }
+
+      .signal {
+        border-radius: 1rem;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.78);
+        padding: 0.95rem 1rem;
+      }
+
+      .signal strong {
+        display: block;
+        margin-bottom: 0.25rem;
+        color: var(--ink);
+      }
+
+      .market-strip {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.9rem;
+        margin-top: 1.1rem;
+      }
+
+      .market-pill {
+        border-radius: 1rem;
+        padding: 0.95rem 1rem;
+        background: rgba(255, 255, 255, 0.09);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+      }
+
+      .market-pill strong {
+        display: block;
+        color: #ffffff;
+        margin-bottom: 0.2rem;
+      }
+
+      .market-pill span {
+        color: #d6ebe1;
+        font-size: 0.92rem;
       }
 
       .cta-row {
@@ -147,6 +256,12 @@
         border-color: var(--brand);
       }
 
+      .btn-accent {
+        background: var(--accent);
+        border-color: var(--accent);
+        color: #1a140e;
+      }
+
       .grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -156,8 +271,9 @@
       .card {
         background: var(--card);
         border: 1px solid var(--line);
-        border-radius: 1rem;
-        padding: 1.1rem;
+        border-radius: 1.2rem;
+        padding: 1.15rem;
+        box-shadow: 0 18px 36px rgba(18, 20, 22, 0.06);
       }
 
       .card h3 + p {
@@ -171,10 +287,11 @@
       }
 
       .strip {
-        background: linear-gradient(100deg, #123f32 0%, #1a7057 100%);
+        background: linear-gradient(115deg, #10271f 0%, #185b45 55%, #d57a2a 130%);
         color: #eaf5ef;
-        border-radius: 1rem;
-        padding: 1.4rem;
+        border-radius: 1.3rem;
+        padding: 1.55rem;
+        box-shadow: var(--shadow);
       }
 
       .strip p {
@@ -209,6 +326,38 @@
         color: var(--muted);
         font-size: 0.92rem;
       }
+
+      .service-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1rem;
+      }
+
+      .service-card {
+        background: rgba(255, 250, 242, 0.82);
+        border: 1px solid var(--line);
+        border-radius: 1.2rem;
+        padding: 1.15rem;
+        box-shadow: 0 18px 36px rgba(18, 20, 22, 0.06);
+      }
+
+      .service-card strong {
+        display: block;
+        margin-bottom: 0.35rem;
+        color: var(--brand);
+        letter-spacing: 0.02em;
+      }
+
+      @media (max-width: 880px) {
+        .hero-shell,
+        .market-strip {
+          grid-template-columns: 1fr;
+        }
+
+        h1 {
+          max-width: none;
+        }
+      }
     </style>
   </head>
   <body>
@@ -218,11 +367,10 @@
         <nav aria-label="Primary">
           <ul>
             <li><a href="homepage.html">Home</a></li>
-            <li><a href="regulated_growth.html">Regulated Growth</a></li>
-            <li><a href="practitioner_growth.html">Practitioner Growth</a></li>
-            <li><a href="compliance_report.html">Compliance Report</a></li>
-            <li><a href="strategy_call.html">Strategy Call</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li><a href="https://tidycal.com/1042lpn/15-minute-meeting">Book a Call</a></li>
           </ul>
         </nav>
       </div>
@@ -231,15 +379,62 @@
     <main>
       <section class="hero">
         <div class="container">
-          <p class="eyebrow reveal">Operator-Led Growth</p>
-          <h1 class="reveal delay-1">Clearer Growth For Regulated Brands And Trust-Based Practices</h1>
-          <p class="lead reveal delay-2">
-            AtlasFlow helps regulated operators and local practices fix positioning, clean up conversion friction,
-            and choose the right next move without generic agency noise.
-          </p>
-          <div class="cta-row reveal delay-2">
-            <a class="btn btn-primary" href="strategy_call.html">Book a Call</a>
-            <a class="btn" href="#lanes">Choose Your Lane</a>
+          <div class="hero-shell">
+            <div class="hero-main reveal">
+              <p class="eyebrow">Operator-Led Growth</p>
+              <h1 class="reveal delay-1">Growth For Cannabis, Wellness, And Trust-Based Practices</h1>
+              <p class="lead reveal delay-2">
+                AtlasFlow helps cannabis, CBD, wellness, and other regulated operators alongside doctors, dentists,
+                and local practices fix positioning, clean up conversion friction, and choose the right next move.
+              </p>
+              <div class="chip-row reveal delay-2">
+                <span class="chip">Cannabis</span>
+                <span class="chip">CBD</span>
+                <span class="chip">Wellness</span>
+                <span class="chip">Doctors</span>
+                <span class="chip">Dentists</span>
+                <span class="chip">Practitioners</span>
+              </div>
+              <div class="cta-row reveal delay-2">
+                <a class="btn btn-accent" href="https://tidycal.com/1042lpn/15-minute-meeting">Book a Call</a>
+                <a class="btn" href="#lanes">Choose Your Lane</a>
+              </div>
+              <div class="market-strip reveal delay-2">
+                <div class="market-pill">
+                  <strong>Regulated Lane</strong>
+                  <span>Cannabis, CBD, wellness, and restricted-market growth.</span>
+                </div>
+                <div class="market-pill">
+                  <strong>Practice Lane</strong>
+                  <span>Doctors, dentists, clinics, and trust-based operators.</span>
+                </div>
+                <div class="market-pill">
+                  <strong>Core Goal</strong>
+                  <span>Make the next move clearer and the contact path easier.</span>
+                </div>
+              </div>
+            </div>
+            <aside class="hero-side reveal delay-1">
+              <h2>Built For Harder Markets</h2>
+              <p>
+                AtlasFlow sits between compliance pressure and trust pressure. That is why the messaging, lane
+                structure, and CTA flow need to feel deliberate instead of generic.
+              </p>
+              <div class="signal-stack">
+                <div class="signal">
+                  <strong>Regulated growth</strong>
+                  Cannabis, CBD, wellness, telemedicine, and other restricted markets.
+                </div>
+                <div class="signal">
+                  <strong>Trust-based growth</strong>
+                  Doctors, dentists, practitioners, and local operators who convert through trust.
+                </div>
+                <div class="signal">
+                  <strong>Operator logic</strong>
+                  Clear lane, clear offer, clear contact path.
+                </div>
+              </div>
+            </aside>
           </div>
         </div>
       </section>
@@ -248,8 +443,8 @@
         <div class="container">
           <h2>What AtlasFlow Does</h2>
           <p class="lead">
-            AtlasFlow is not a generic growth agency. It works where trust, compliance, and decision quality shape
-            whether growth compounds or stalls.
+            AtlasFlow is built for two hard categories: regulated operators like cannabis and CBD brands, and
+            trust-based practices like doctors, dentists, and wellness clinics.
           </p>
         </div>
       </section>
@@ -261,8 +456,8 @@
             <article class="card">
               <h3>Regulated Growth</h3>
               <p>
-                For cannabis, CBD, telemedicine, and other compliance-sensitive markets that need sharper
-                positioning and practical growth support.
+                For cannabis, CBD, wellness, telemedicine, and other compliance-sensitive markets that need sharper
+                positioning, compliant growth decisions, and practical execution support.
               </p>
               <ul>
                 <li>South African Cannabis Compliance Report</li>
@@ -277,8 +472,8 @@
             <article class="card">
               <h3>Practitioner Growth</h3>
               <p>
-                For doctors, GPs, dentists, chiropractors, and other trust-based local practices focused on cleaner
-                inquiry-to-booking flow.
+                For doctors, dentists, practitioners, and other trust-based local businesses that need cleaner
+                inquiry-to-booking flow and stronger patient or client conversion.
               </p>
               <ul>
                 <li>Practitioner Growth Audit</li>
@@ -309,7 +504,7 @@
               <h3>Strategy / Clarity Call</h3>
               <p>A direct session for teams that need sharper judgment and a cleaner next move.</p>
               <div class="cta-row">
-                <a class="btn btn-primary" href="strategy_call.html">Open Strategy Call</a>
+                <a class="btn btn-primary" href="https://tidycal.com/1042lpn/15-minute-meeting">Book a Strategy Call</a>
               </div>
             </article>
             <article class="card">
@@ -323,12 +518,68 @@
         </div>
       </section>
 
+      <section id="services">
+        <div class="container">
+          <h2>Execution Areas</h2>
+          <p class="lead">
+            The lane tells you where you fit. The execution areas show how AtlasFlow actually helps once the problem is clear.
+          </p>
+          <div class="cta-row" style="margin-bottom: 1rem;">
+            <a class="btn btn-primary" href="services.html">Open All Services</a>
+          </div>
+          <div class="service-grid">
+            <article class="service-card">
+              <strong>Regulated Growth Marketing</strong>
+              <p>Cannabis, CBD, wellness, and other restricted-market growth work shaped by platform policy, compliance, and trust.</p>
+              <div class="cta-row">
+                <a class="btn" href="services.html">View Services</a>
+              </div>
+            </article>
+            <article class="service-card">
+              <strong>Paid Advertising</strong>
+              <p>Data-led campaigns across Google, Meta, TikTok, and adjacent channels where efficiency and attribution matter.</p>
+              <div class="cta-row">
+                <a class="btn" href="services.html">View Services</a>
+              </div>
+            </article>
+            <article class="service-card">
+              <strong>SEO And Content</strong>
+              <p>Authority-building search and content systems for operators who need education, trust, and long-term demand.</p>
+              <div class="cta-row">
+                <a class="btn" href="services.html">View Services</a>
+              </div>
+            </article>
+            <article class="service-card">
+              <strong>Shopify And E-Commerce</strong>
+              <p>Store build, conversion path cleanup, and commerce execution for brands that need a better buying surface.</p>
+              <div class="cta-row">
+                <a class="btn" href="services.html">View Services</a>
+              </div>
+            </article>
+            <article class="service-card">
+              <strong>Brand Strategy And Identity</strong>
+              <p>Positioning, messaging, and visual clarity for operators who need to look credible in crowded or sensitive markets.</p>
+              <div class="cta-row">
+                <a class="btn" href="services.html">View Services</a>
+              </div>
+            </article>
+            <article class="service-card">
+              <strong>Brand Growth Systems</strong>
+              <p>Joined-up strategy across brand, paid, content, and conversion for operators who need one coherent growth direction.</p>
+              <div class="cta-row">
+                <a class="btn" href="services.html">View Services</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section>
         <div class="container">
           <h2>Why AtlasFlow</h2>
           <p class="lead">
-            AtlasFlow is built around difficult markets. The work is shaped by trust, constraints, positioning, and
-            real conversion mechanics, not generic performance language.
+            AtlasFlow is built around difficult markets. That means regulated industries where compliance shapes
+            growth, and trust-based practices where the contact path and booking journey decide conversion.
           </p>
         </div>
       </section>
@@ -338,13 +589,13 @@
           <div class="strip">
             <h2>Start with the lane that matches your market and growth problem.</h2>
             <p>
-              Use the regulated path if compliance and market positioning are the real constraint. Use the
-              practitioner path if inquiry flow and booking conversion are the main issue.
+              Use the regulated path if cannabis, CBD, wellness, or another restricted market is the real context.
+              Use the practitioner path if doctors, dentists, or other trust-based operators need a cleaner growth path.
             </p>
             <div class="cta-row">
               <a class="btn btn-primary" href="regulated_growth.html">Open Regulated Growth</a>
               <a class="btn" href="practitioner_growth.html">Open Practitioner Growth</a>
-              <a class="btn" href="strategy_call.html">Book a Call</a>
+              <a class="btn" href="https://tidycal.com/1042lpn/15-minute-meeting">Book a Call</a>
               <a class="btn" href="contact.html">Contact AtlasFlow</a>
             </div>
           </div>
@@ -354,7 +605,7 @@
 
     <footer class="site-footer">
       <div class="container">
-        AtlasFlow | Operator-led growth systems for regulated and trust-based markets.
+        AtlasFlow | Operator-led growth systems for cannabis, wellness, and trust-based markets.
       </div>
     </footer>
       <script src="assets/site-config.js" defer></script>

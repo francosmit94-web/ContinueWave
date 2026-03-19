@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services | AtlasFlow</title>
+    <meta
+      name="description"
+      content="AtlasFlow services for cannabis, CBD, e-commerce, brand strategy, paid advertising, SEO, content, and broader growth execution."
+    />
+    <link rel="canonical" href="https://implementationpages.vercel.app/services.html" />
+    <style>
+      :root {
+        --bg: #060707;
+        --panel: #0b0c0c;
+        --panel-soft: #0b1a13;
+        --ink: #f2f0ea;
+        --muted: #a29e94;
+        --line: rgba(212, 175, 79, 0.14);
+        --gold: #d4af4f;
+        --gold-soft: rgba(212, 175, 79, 0.1);
+        --shadow: 0 28px 80px rgba(0, 0, 0, 0.42);
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 18% 12%, rgba(10, 55, 39, 0.34) 0%, transparent 28%),
+          radial-gradient(circle at 82% 8%, rgba(212, 175, 79, 0.08) 0%, transparent 18%),
+          linear-gradient(180deg, #050606 0%, #09120d 55%, #050606 100%);
+        line-height: 1.45;
+      }
+
+      .container { width: min(1180px, 92vw); margin: 0 auto; }
+
+      .site-header {
+        border-bottom: 1px solid var(--line);
+        background: rgba(7, 8, 8, 0.86);
+        position: sticky;
+        top: 0;
+      }
+
+      .site-header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.95rem 0;
+      }
+
+      .brand { font-weight: 900; letter-spacing: 0.02em; }
+      .brand span { color: var(--gold); }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #d8d4c8;
+        font-size: 0.95rem;
+      }
+
+      nav a:hover { color: var(--gold); }
+
+      section { padding: 3.7rem 0; }
+      .hero { padding-top: 4.8rem; }
+
+      .eyebrow {
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        color: var(--gold);
+        font-size: 0.82rem;
+        margin-bottom: 1rem;
+      }
+
+      h1, h2, h3 { margin: 0 0 0.8rem; line-height: 1.08; }
+      h1 { font-size: clamp(3rem, 6vw, 5.2rem); max-width: 9ch; }
+      h2 { font-size: clamp(2rem, 4vw, 3.2rem); }
+      p { margin: 0 0 1rem; color: var(--muted); }
+
+      .hero-wrap,
+      .service-card,
+      .cluster-card,
+      .cta-box {
+        border: 1px solid var(--line);
+        border-radius: 1.2rem;
+        box-shadow: var(--shadow);
+      }
+
+      .hero-wrap {
+        background: linear-gradient(135deg, rgba(7, 12, 10, 0.98) 0%, rgba(8, 33, 24, 0.96) 58%, rgba(14, 55, 40, 0.92) 100%);
+        padding: 1.7rem;
+      }
+
+      .hero-wrap p {
+        max-width: 56ch;
+      }
+
+      .cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.85rem;
+        margin-top: 1rem;
+      }
+
+      .btn {
+        display: inline-block;
+        text-decoration: none;
+        padding: 0.82rem 1.2rem;
+        border-radius: 0.8rem;
+        border: 1px solid var(--line);
+        font-weight: 800;
+        color: var(--ink);
+      }
+
+      .btn-primary {
+        background: var(--gold);
+        border-color: var(--gold);
+        color: #17120c;
+      }
+
+      .service-grid,
+      .cluster-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1.1rem;
+      }
+
+      .service-card,
+      .cluster-card {
+        background: var(--panel);
+        padding: 1.25rem;
+      }
+
+      .icon {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 0.9rem;
+        background: var(--gold-soft);
+        border: 1px solid rgba(212, 175, 79, 0.18);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--gold);
+        font-size: 1.1rem;
+        margin-bottom: 0.9rem;
+      }
+
+      .cluster-card {
+        background: rgba(255, 255, 255, 0.02);
+      }
+
+      .cta-box {
+        background: linear-gradient(115deg, #0a0b0b 0%, #11392c 55%, #d4af4f 145%);
+        padding: 1.45rem;
+      }
+
+      .site-footer {
+        border-top: 1px solid var(--line);
+        padding: 1.45rem 0 2rem;
+        color: #8f8b82;
+        font-size: 0.92rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <div class="brand">ATLAS<span>FLOW</span></div>
+        <nav aria-label="Primary">
+          <ul>
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="https://tidycal.com/1042lpn/15-minute-meeting">Book a Call</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero-wrap">
+            <div class="eyebrow">Services</div>
+            <h1>Execution Areas Inside AtlasFlow</h1>
+            <p>
+              AtlasFlow operates through real service lines, not vague agency promises. These services sit under the
+              broader brand and connect back into the regulated and practitioner lanes where needed.
+            </p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="https://tidycal.com/1042lpn/15-minute-meeting">Book a Call</a>
+              <a class="btn" href="regulated_growth.html">Open Regulated Growth</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="eyebrow">Service Lines</div>
+          <h2>Core AtlasFlow Services</h2>
+          <div class="service-grid">
+            <article class="service-card">
+              <div class="icon">C</div>
+              <h3>Cannabis Marketing</h3>
+              <p>Growth systems for cannabis operators building in restricted and high-scrutiny markets.</p>
+              <div class="cta-row">
+                <a class="btn" href="regulated_growth.html">View Lane</a>
+              </div>
+            </article>
+            <article class="service-card">
+              <div class="icon">B</div>
+              <h3>CBD Marketing</h3>
+              <p>Policy-aware channel strategy and content direction for CBD brands across multiple markets.</p>
+              <div class="cta-row">
+                <a class="btn" href="regulated_growth.html">View Lane</a>
+              </div>
+            </article>
+            <article class="service-card">
+              <div class="icon">S</div>
+              <h3>Shopify Development</h3>
+              <p>Commerce surfaces built for premium positioning, speed, and stronger conversion.</p>
+              <div class="cta-row">
+                <a class="btn" href="contact.html">Discuss Service</a>
+              </div>
+            </article>
+            <article class="service-card">
+              <div class="icon">I</div>
+              <h3>Branding & Identity</h3>
+              <p>Sharper identity systems for brands that need trust, legitimacy, and clearer recall.</p>
+              <div class="cta-row">
+                <a class="btn" href="contact.html">Discuss Service</a>
+              </div>
+            </article>
+            <article class="service-card">
+              <div class="icon">P</div>
+              <h3>Paid Advertising</h3>
+              <p>Acquisition systems across Google, Meta, TikTok, and adjacent paid channels.</p>
+              <div class="cta-row">
+                <a class="btn" href="contact.html">Discuss Service</a>
+              </div>
+            </article>
+            <article class="service-card">
+              <div class="icon">Q</div>
+              <h3>SEO & Content</h3>
+              <p>Search visibility and authority-building content for long-term demand and trust.</p>
+              <div class="cta-row">
+                <a class="btn" href="contact.html">Discuss Service</a>
+              </div>
+            </article>
+            <article class="service-card">
+              <div class="icon">G</div>
+              <h3>Brand Growth</h3>
+              <p>Joined-up strategy across brand, paid, content, and conversion for brands that need coherence.</p>
+              <div class="cta-row">
+                <a class="btn" href="contact.html">Discuss Service</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="eyebrow">How It Fits</div>
+          <h2>Service Clusters By Commercial Context</h2>
+          <div class="cluster-grid">
+            <article class="cluster-card">
+              <h3>Regulated Cluster</h3>
+              <p>Cannabis marketing, CBD marketing, paid advertising, SEO/content, Shopify, and brand work for regulated operators.</p>
+            </article>
+            <article class="cluster-card">
+              <h3>Practice Cluster</h3>
+              <p>Practitioner growth, audits, response systems, and trust-based brand/conversion work for clinics and local operators.</p>
+            </article>
+            <article class="cluster-card">
+              <h3>Conversion Cluster</h3>
+              <p>Strategy, content, commerce, acquisition, and contact-flow cleanup tied to real business decisions.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="cta-box">
+            <h2>If you already know the service you need, use the direct contact path.</h2>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="https://tidycal.com/1042lpn/15-minute-meeting">Book a Call</a>
+              <a class="btn" href="contact.html">Contact AtlasFlow</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">AtlasFlow | Service architecture for regulated operators and competitive markets.</div>
+    </footer>
+    <script src="assets/site-config.js" defer></script>
+    <script src="assets/site-runtime.js" defer></script>
+  </body>
+</html>

@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,18 +6,20 @@
     <title>Contact AtlasFlow</title>
     <meta
       name="description"
-      content="Reach out if you are operating in a regulated market or running a trust-based practice and need a clearer next move."
+      content="Book a strategy call or send a message to AtlasFlow if you need clearer growth direction for a regulated or trust-based business."
     />
     <link rel="canonical" href="https://implementationpages.vercel.app/contact.html" />
     <style>
       :root {
-        --bg: #f2efe9;
+        --bg: #efe7dc;
         --ink: #131619;
         --muted: #535c60;
         --line: #d1cac0;
         --brand: #2b4b63;
         --brand-soft: #ebf2f7;
-        --card: #fbf8f3;
+        --accent: #d17c35;
+        --card: #fffaf4;
+        --shadow: 0 22px 52px rgba(19, 22, 24, 0.1);
       }
 
       * { box-sizing: border-box; }
@@ -27,13 +29,13 @@
         font-family: "Trebuchet MS", "Segoe UI", sans-serif;
         color: var(--ink);
         background:
-          radial-gradient(circle at 100% 0%, #e6eef5 0%, transparent 38%),
-          radial-gradient(circle at 0% 0%, #f9f4eb 0%, transparent 45%),
-          linear-gradient(180deg, var(--bg) 0%, #faf7f2 100%);
+          radial-gradient(circle at 92% 6%, rgba(220, 234, 245, 0.9) 0%, transparent 32%),
+          radial-gradient(circle at 8% 10%, rgba(255, 247, 235, 0.95) 0%, transparent 34%),
+          linear-gradient(180deg, var(--bg) 0%, #faf6ef 100%);
         line-height: 1.45;
       }
 
-      .container { width: min(960px, 92vw); margin: 0 auto; }
+      .container { width: min(1040px, 92vw); margin: 0 auto; }
 
       .site-header {
         border-bottom: 1px solid var(--line);
@@ -63,29 +65,39 @@
       nav a:hover { color: var(--brand); }
 
       section { padding: 2.8rem 0; }
-      .hero { padding-top: 3.8rem; }
+      .hero { padding-top: 4rem; }
 
       .hero-wrap {
-        border-radius: 1rem;
-        background: linear-gradient(126deg, #2b4b63 0%, #35607d 65%, #3f7395 100%);
+        border-radius: 1.3rem;
+        background: linear-gradient(135deg, rgba(24, 44, 59, 0.97) 0%, rgba(43, 75, 99, 0.95) 58%, rgba(63, 115, 149, 0.92) 100%);
         color: #ebf4fb;
-        padding: 1.45rem;
+        padding: 1.6rem;
+        box-shadow: var(--shadow);
       }
 
-      h1, h2 { margin: 0 0 0.8rem; line-height: 1.15; }
-      h1 { font-size: clamp(1.8rem, 4.8vw, 2.8rem); }
+      h1, h2, h3 { margin: 0 0 0.8rem; line-height: 1.15; }
+
+      h1 {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(2.15rem, 5vw, 3.35rem);
+      }
 
       p { margin: 0 0 1rem; color: var(--muted); }
-      .hero p { color: #dce9f4; }
+      .hero p { color: #dce9f4; max-width: 58ch; }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 1rem;
+      }
 
       .card {
         border: 1px solid var(--line);
         background: var(--card);
-        border-radius: 1rem;
+        border-radius: 1.15rem;
         padding: 1.2rem;
+        box-shadow: 0 18px 38px rgba(19, 22, 24, 0.06);
       }
-
-      ul { margin: 0.55rem 0 0; padding-left: 1.05rem; color: var(--muted); }
 
       form {
         margin-top: 0.8rem;
@@ -93,24 +105,20 @@
         gap: 0.75rem;
       }
 
-      label {
-        font-weight: 700;
-        font-size: 0.92rem;
-      }
+      label { font-weight: 700; font-size: 0.92rem; }
 
       input, select, textarea {
         width: 100%;
         border: 1px solid #b9cddd;
-        border-radius: 0.6rem;
-        padding: 0.7rem;
+        border-radius: 0.65rem;
+        padding: 0.72rem;
         font: inherit;
         background: #fff;
       }
 
-      textarea {
-        min-height: 90px;
-        resize: vertical;
-      }
+      textarea { min-height: 100px; resize: vertical; }
+
+      ul { margin: 0.55rem 0 0; padding-left: 1.05rem; color: var(--muted); }
 
       .cta-row {
         display: flex;
@@ -128,9 +136,9 @@
       }
 
       .btn-primary {
-        background: #eff6fc;
-        border-color: #eff6fc;
-        color: #27475d;
+        background: var(--accent);
+        border-color: var(--accent);
+        color: #1f160d;
       }
 
       .btn-secondary {
@@ -146,6 +154,10 @@
         color: var(--muted);
         font-size: 0.92rem;
       }
+
+      @media (max-width: 820px) {
+        .grid { grid-template-columns: 1fr; }
+      }
     </style>
   </head>
   <body>
@@ -155,12 +167,10 @@
         <nav aria-label="Primary">
           <ul>
             <li><a href="homepage.html">Home</a></li>
-            <li><a href="regulated_growth.html">Regulated Growth</a></li>
-            <li><a href="practitioner_growth.html">Practitioner Growth</a></li>
-            <li><a href="compliance_report.html">Compliance Report</a></li>
-            <li><a href="strategy_call.html">Strategy Call</a></li>
+            <li><a href="services.html">Services</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li><a href="https://tidycal.com/1042lpn/15-minute-meeting">Book a Call</a></li>
           </ul>
         </nav>
       </div>
@@ -170,13 +180,13 @@
       <section class="hero">
         <div class="container">
           <div class="hero-wrap">
-            <h1>Start The Conversation</h1>
+            <h1>Get In Touch</h1>
             <p>
-              If you are operating in a regulated market, building a trust-based practice, or trying to figure out
-              the right next move, reach out.
+              Book a 15-minute call or send a message if you need a clearer next move for a cannabis, wellness,
+              regulated, or trust-based business.
             </p>
             <div class="cta-row">
-              <a class="btn btn-primary" href="strategy_call.html">Book a Call</a>
+              <a class="btn btn-primary" href="https://tidycal.com/1042lpn/15-minute-meeting">Book a Call</a>
               <a class="btn btn-secondary" href="mailto:francosmit94@gmail.com">Email AtlasFlow</a>
             </div>
           </div>
@@ -185,99 +195,75 @@
 
       <section>
         <div class="container">
-          <div class="card">
-            <h2>Choose The Right Contact Path</h2>
-            <ul>
-              <li>Book a call if the decision is already live and you need direct judgment</li>
-              <li>Send an inquiry if you need to check fit before a deeper conversation</li>
-              <li>Email directly if you want the simplest reliable contact path</li>
-            </ul>
-            <div class="cta-row" style="margin-top: 1rem;">
-              <a class="btn btn-primary" href="strategy_call.html">Book a Call</a>
-              <a class="btn btn-secondary" href="mailto:francosmit94@gmail.com">Email AtlasFlow</a>
+          <div class="grid">
+            <div class="card">
+              <h2>Send Us A Message</h2>
+              <p>If the form does not submit cleanly in your browser, the email fallback will open automatically.</p>
+              <form data-form-type="contact">
+                <div>
+                  <label for="name">Name</label>
+                  <input id="name" name="name" type="text" required />
+                </div>
+                <div>
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" required />
+                </div>
+                <div>
+                  <label for="company">Company</label>
+                  <input id="company" name="company" type="text" />
+                </div>
+                <div>
+                  <label for="budget">Monthly Budget</label>
+                  <select id="budget" name="monthly_budget">
+                    <option value="">Select budget</option>
+                    <option value="under_1k">Under 1k</option>
+                    <option value="1k_5k">1k - 5k</option>
+                    <option value="5k_15k">5k - 15k</option>
+                    <option value="15k_plus">15k+</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="reason">Reason For Contact</label>
+                  <select id="reason" name="reason" required>
+                    <option value="">Select one</option>
+                    <option value="strategy_call">Book a strategy call</option>
+                    <option value="audit">Request an audit</option>
+                    <option value="services">Service fit inquiry</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" required></textarea>
+                </div>
+                <div class="cta-row">
+                  <button class="btn btn-primary" type="submit">Send Message</button>
+                  <a class="btn btn-secondary" href="mailto:francosmit94@gmail.com?subject=AtlasFlow%20Inquiry">Email Instead</a>
+                </div>
+              </form>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="container">
-          <div class="card">
-            <h2>Who Should Reach Out</h2>
-            <ul>
-              <li>You already know what you need help with</li>
-              <li>You want to book a call</li>
-              <li>You want to ask whether there is a fit</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="container">
-          <div class="card">
-            <h2>Contact Options</h2>
-            <p>
-              Use the inquiry form if it works normally in your browser. If not, email
-              <a href="mailto:francosmit94@gmail.com">francosmit94@gmail.com</a> directly.
-            </p>
-            <div class="cta-row">
-              <a class="btn btn-primary" href="strategy_call.html">Book a Call</a>
-              <a class="btn btn-secondary" href="#inquiry">Send an Inquiry</a>
-              <a class="btn btn-secondary" href="mailto:francosmit94@gmail.com">Email AtlasFlow</a>
+            <div class="card">
+              <h2>Contact Information</h2>
+              <p>Prefer a direct conversation? Use the booking link or email directly.</p>
+              <ul>
+                <li><a href="mailto:francosmit94@gmail.com">francosmit94@gmail.com</a></li>
+                <li>South Africa | Global</li>
+                <li>15-minute booking via TidyCal</li>
+              </ul>
+              <div class="cta-row" style="margin-top: 1rem;">
+                <a class="btn btn-primary" href="https://tidycal.com/1042lpn/15-minute-meeting">Book a Call</a>
+                <a class="btn btn-secondary" href="mailto:francosmit94@gmail.com">Email AtlasFlow</a>
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="inquiry">
-        <div class="container">
-          <div class="card">
-            <h2>Send an Inquiry</h2>
-            <p>
-              If the form does not submit cleanly, use email instead:
-              <a href="mailto:francosmit94@gmail.com?subject=AtlasFlow%20Inquiry">francosmit94@gmail.com</a>.
-            </p>
-            <form data-form-type="contact">
-              <div>
-                <label for="name">Name</label>
-                <input id="name" name="name" type="text" required />
-              </div>
-              <div>
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" required />
-              </div>
-              <div>
-                <label for="reason">Reason For Contact</label>
-                <select id="reason" name="reason" required>
-                  <option value="">Select one</option>
-                  <option value="strategy_call">Book a strategy call</option>
-                  <option value="audit">Request an audit</option>
-                  <option value="services">Service fit inquiry</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-              <div>
-                <label for="message">Short Message</label>
-                <textarea id="message" name="message" required></textarea>
-              </div>
-              <div class="cta-row">
-                <button class="btn btn-primary" type="submit">Send an Inquiry</button>
-                <a class="btn btn-secondary" href="strategy_call.html">Book a Call</a>
-                <a class="btn btn-secondary" href="mailto:francosmit94@gmail.com?subject=AtlasFlow%20Inquiry">Email Instead</a>
-              </div>
-            </form>
           </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container">AtlasFlow | Clear next moves for regulated and trust-based operators.</div>
+      <div class="container">AtlasFlow | Clear next moves for regulated operators and trust-based practices.</div>
     </footer>
-      <script src="assets/site-config.js" defer></script>
+    <script src="assets/site-config.js" defer></script>
     <script src="assets/site-runtime.js" defer></script>
   </body>
 </html>
-
-
