@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cannabis Marketing | AtlasFlow</title>
+    <meta
+      name="description"
+      content="Cannabis marketing for restricted markets: compliance-aware growth strategy, authority building, channel planning, and conversion surfaces for cannabis brands."
+    />
+    <link rel="canonical" href="https://implementationpages.vercel.app/cannabis_marketing.html" />
+    <style>
+      :root {
+        --bg: #060707;
+        --panel: #0b0c0c;
+        --panel-soft: #0d1f16;
+        --ink: #f2f0ea;
+        --muted: #a29e94;
+        --line: rgba(212, 175, 79, 0.14);
+        --gold: #d4af4f;
+        --gold-soft: rgba(212, 175, 79, 0.1);
+        --shadow: 0 28px 80px rgba(0, 0, 0, 0.42);
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 14% 10%, rgba(10, 55, 39, 0.34) 0%, transparent 28%),
+          radial-gradient(circle at 86% 8%, rgba(212, 175, 79, 0.08) 0%, transparent 18%),
+          linear-gradient(180deg, #050606 0%, #09120d 55%, #050606 100%);
+        line-height: 1.45;
+      }
+
+      .container { width: min(1180px, 92vw); margin: 0 auto; }
+
+      .site-header {
+        border-bottom: 1px solid var(--line);
+        background: rgba(7, 8, 8, 0.86);
+        position: sticky;
+        top: 0;
+      }
+
+      .site-header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.95rem 0;
+      }
+
+      .brand { font-weight: 900; letter-spacing: 0.02em; }
+      .brand span { color: var(--gold); }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #d8d4c8;
+        font-size: 0.95rem;
+      }
+
+      nav a:hover { color: var(--gold); }
+
+      section { padding: 3.7rem 0; }
+      .hero { padding-top: 4.8rem; }
+
+      .eyebrow {
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        color: var(--gold);
+        font-size: 0.82rem;
+        margin-bottom: 1rem;
+      }
+
+      h1, h2, h3 { margin: 0 0 0.8rem; line-height: 1.08; }
+      h1 { font-size: clamp(3rem, 6vw, 5rem); max-width: 10ch; }
+      h2 { font-size: clamp(2rem, 4vw, 3rem); }
+      p { margin: 0 0 1rem; color: var(--muted); }
+
+      .hero-wrap,
+      .card,
+      .challenge-card,
+      .deliver-card,
+      .faq-card,
+      .cta-box {
+        border: 1px solid var(--line);
+        border-radius: 1.2rem;
+        box-shadow: var(--shadow);
+      }
+
+      .hero-wrap {
+        background: linear-gradient(135deg, rgba(7, 12, 10, 0.98) 0%, rgba(8, 33, 24, 0.96) 58%, rgba(14, 55, 40, 0.92) 100%);
+        padding: 1.7rem;
+      }
+
+      .hero-wrap p { max-width: 58ch; }
+
+      .badge-row,
+      .cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.85rem;
+      }
+
+      .badge-row { margin: 1rem 0 1.1rem; }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.45rem 0.8rem;
+        border-radius: 999px;
+        border: 1px solid rgba(212, 175, 79, 0.18);
+        background: rgba(255, 255, 255, 0.04);
+        color: #e7e0cf;
+        font-size: 0.86rem;
+      }
+
+      .btn {
+        display: inline-block;
+        text-decoration: none;
+        padding: 0.82rem 1.2rem;
+        border-radius: 0.8rem;
+        border: 1px solid var(--line);
+        font-weight: 800;
+        color: var(--ink);
+      }
+
+      .btn-primary {
+        background: var(--gold);
+        border-color: var(--gold);
+        color: #17120c;
+      }
+
+      .grid,
+      .challenge-grid,
+      .deliver-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1.1rem;
+      }
+
+      .card,
+      .challenge-card,
+      .deliver-card,
+      .faq-card {
+        background: var(--panel);
+        padding: 1.25rem;
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 0.9rem;
+        margin-top: 1.2rem;
+      }
+
+      .stat-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid var(--line);
+        border-radius: 1rem;
+        padding: 1rem;
+      }
+
+      .stat-card strong {
+        display: block;
+        color: var(--gold);
+        font-size: 1.15rem;
+        margin-bottom: 0.2rem;
+      }
+
+      .deliver-card strong {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 999px;
+        margin-bottom: 0.75rem;
+        background: var(--gold-soft);
+        color: var(--gold);
+        font-size: 0.9rem;
+      }
+
+      .faq-card h3 {
+        color: var(--gold);
+        font-size: 1rem;
+      }
+
+      .cta-box {
+        background: linear-gradient(115deg, #0a0b0b 0%, #11392c 55%, #d4af4f 145%);
+        padding: 1.45rem;
+      }
+
+      .site-footer {
+        border-top: 1px solid var(--line);
+        padding: 1.45rem 0 2rem;
+        color: #8f8b82;
+        font-size: 0.92rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <div class="brand">ATLAS<span>FLOW</span></div>
+        <nav aria-label="Primary">
+          <ul>
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="https://tidycal.com/1042lpn/15-minute-meeting">Book a Call</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero-wrap">
+            <div class="eyebrow">Cannabis Growth Specialists</div>
+            <h1>Cannabis Marketing For Restricted Markets</h1>
+            <p>
+              AtlasFlow helps cannabis brands navigate advertising restrictions, platform risk, market education,
+              brand legitimacy, and conversion friction without falling into generic agency playbooks.
+            </p>
+            <div class="badge-row">
+              <span class="badge">Cannabis</span>
+              <span class="badge">Restricted Markets</span>
+              <span class="badge">Compliance-Aware Growth</span>
+              <span class="badge">Authority Building</span>
+            </div>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="https://tidycal.com/1042lpn/15-minute-meeting">Book a Consultation</a>
+              <a class="btn" href="regulated_growth.html">Open Regulated Growth</a>
+            </div>
+            <div class="stats-grid">
+              <div class="stat-card">
+                <strong>Advertising</strong>
+                Google, Meta, and TikTok restrictions shape execution.
+              </div>
+              <div class="stat-card">
+                <strong>Education</strong>
+                Trust and legitimacy are part of growth, not extras.
+              </div>
+              <div class="stat-card">
+                <strong>Jurisdiction</strong>
+                South African and cross-market nuance changes the plan.
+              </div>
+              <div class="stat-card">
+                <strong>Conversion</strong>
+                Better positioning and clearer next steps reduce waste.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="eyebrow">The Challenge</div>
+          <h2>Why Cannabis Marketing Needs A Different Playbook</h2>
+          <div class="challenge-grid">
+            <article class="challenge-card">
+              <h3>Advertising Restrictions</h3>
+              <p>Major platforms restrict cannabis advertising, which means standard paid-media playbooks break quickly.</p>
+            </article>
+            <article class="challenge-card">
+              <h3>Platform Bans & Shutdowns</h3>
+              <p>Accounts and campaigns face scrutiny, so growth needs resilience instead of channel dependence.</p>
+            </article>
+            <article class="challenge-card">
+              <h3>Regulatory Complexity</h3>
+              <p>Market rules differ by country and region, so positioning and execution have to respect real nuance.</p>
+            </article>
+            <article class="challenge-card">
+              <h3>Brand Legitimacy</h3>
+              <p>In a sensitive category, premium brand surfaces and authority cues are part of the conversion path.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="eyebrow">What We Deliver</div>
+          <h2>Cannabis Marketing Execution Areas</h2>
+          <div class="deliver-grid">
+            <article class="deliver-card">
+              <strong>01</strong>
+              <h3>Social Media Strategy</h3>
+              <p>Compliant organic and community-led social strategy built to reduce risk while keeping the brand visible.</p>
+            </article>
+            <article class="deliver-card">
+              <strong>02</strong>
+              <h3>Influencer & Authority Partnerships</h3>
+              <p>Thought-leader and influencer support that strengthens reach and trust where direct ads are constrained.</p>
+            </article>
+            <article class="deliver-card">
+              <strong>03</strong>
+              <h3>SEO & Content Marketing</h3>
+              <p>Educational content and search visibility that help cannabis brands build authority and long-term demand.</p>
+            </article>
+            <article class="deliver-card">
+              <strong>04</strong>
+              <h3>Paid Media Workarounds</h3>
+              <p>Practical acquisition planning for restricted environments where platform policy shapes the channel mix.</p>
+            </article>
+            <article class="deliver-card">
+              <strong>05</strong>
+              <h3>Email, CRM, And Retention</h3>
+              <p>Direct-response systems that maintain contact and nurture leads when other channels are unstable.</p>
+            </article>
+            <article class="deliver-card">
+              <strong>06</strong>
+              <h3>Brand Development</h3>
+              <p>Sharper positioning, premium visuals, and cleaner conversion surfaces that make the brand look credible.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="eyebrow">How It Fits</div>
+          <div class="grid">
+            <article class="card">
+              <h3>Best For</h3>
+              <p>Cannabis operators who need clearer growth direction, better positioning, and execution that respects real market constraints.</p>
+            </article>
+            <article class="card">
+              <h3>Related Path</h3>
+              <p>This service sits inside the broader regulated lane alongside CBD, paid, SEO, Shopify, and brand work.</p>
+            </article>
+            <article class="card">
+              <h3>Starting Point</h3>
+              <p>If the decision is still unclear, start with the regulated growth lane or contact AtlasFlow directly.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="eyebrow">FAQ</div>
+          <div class="grid">
+            <article class="faq-card">
+              <h3>Can you advertise cannabis on Google or Meta?</h3>
+              <p>Not in the same way as unrestricted brands. The work is about compliant channel planning, workarounds, and stronger owned-media systems.</p>
+            </article>
+            <article class="faq-card">
+              <h3>Do you work outside South Africa?</h3>
+              <p>Yes. The market logic changes by jurisdiction, so the operating context matters and is handled case by case.</p>
+            </article>
+            <article class="faq-card">
+              <h3>Is this a legal advisory service?</h3>
+              <p>No. This is growth, positioning, and execution support shaped by restricted-market realities.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="cta-box">
+            <h2>If your cannabis brand is operating in a restricted environment, start with a direct conversation.</h2>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="https://tidycal.com/1042lpn/15-minute-meeting">Book a Consultation</a>
+              <a class="btn" href="contact.html">Contact AtlasFlow</a>
+              <a class="btn" href="services.html">Back To Services</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">AtlasFlow | Cannabis marketing for restricted and trust-sensitive markets.</div>
+    </footer>
+    <script src="assets/site-config.js" defer></script>
+    <script src="assets/site-runtime.js" defer></script>
+  </body>
+</html>
