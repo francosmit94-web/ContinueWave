@@ -272,6 +272,28 @@
     return `mailto:${encodeURIComponent(fallbackEmail)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   }
 
+  function triggerMailtoConversion(formType, payload, source) {
+    const href = buildMailtoHref(formType, payload);
+    let opened = false;
+
+    function openMailto() {
+      if (opened) return;
+      opened = true;
+      window.location.href = href;
+    }
+
+    track("conversion_email_intent", {
+      method: "mailto",
+      form_type: formType,
+      source: source || "unknown",
+      page_path: window.location.pathname,
+      event_callback: openMailto,
+      event_timeout: 250,
+    });
+
+    window.setTimeout(openMailto, 250);
+  }
+
   async function handleFormSubmit(event) {
     event.preventDefault();
     const form = event.currentTarget;
@@ -297,7 +319,7 @@
         `Live form backend is temporarily offline. Opening your email client instead. If nothing opens, email ${(config.fallbackEmail || "the support address")} directly.`
       );
       track("form_submit_blocked", { form_type: formType, reason: "email_fallback" });
-      window.location.href = buildMailtoHref(formType, payload);
+      triggerMailtoConversion(formType, payload, "email_fallback");
       return;
     }
 
@@ -363,11 +385,45 @@
     });
   }
 
+  function setupContactIntentTracking() {
+    const contactLinks = [
+      {
+        selector: 'a[href^="mailto:"]',
+        eventName: "conversion_email_intent",
+        method: "email",
+      },
+      {
+        selector: 'a[href^="tel:"]',
+        eventName: "conversion_phone_intent",
+        method: "phone",
+      },
+      {
+        selector: 'a[href*="wa.me"], a[href*="whatsapp"]',
+        eventName: "conversion_whatsapp_intent",
+        method: "whatsapp",
+      },
+    ];
+
+    contactLinks.forEach(({ selector, eventName, method }) => {
+      document.querySelectorAll(selector).forEach((link) => {
+        link.addEventListener("click", () => {
+          track(eventName, {
+            method,
+            href: link.getAttribute("href") || "",
+            page_path: window.location.pathname,
+            source: "direct_link",
+          });
+        });
+      });
+    });
+  }
+
   exposeDebugApi();
   ensureGaPanel();
   setupAnalytics();
   ensureCanonical();
   setupForms();
   setupCtaTracking();
+  setupContactIntentTracking();
   track("page_view", { page_path: window.location.pathname, page_title: document.title });
 })();
