@@ -1,0 +1,5 @@
+.env
+.netlify/
+AGENTS.md
+__pycache__/
+*.pyc

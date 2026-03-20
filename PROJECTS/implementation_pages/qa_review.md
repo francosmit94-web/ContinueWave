@@ -27,7 +27,6 @@ Results
 Notes
 - Form submission endpoint now points to FormSubmit (`growth@atlasflow.co.za`) for contact/newsletter/strategy-call flows.
 - Production-like endpoint smoke test (with `Origin` + `Referer`) is active and returning successful submissions.
-- Production-origin smoke checks now return `success:true` for `contact`, `newsletter`, and `strategy_call`.
 - GA4 Measurement ID `G-EGX6W6THK5` is configured in `assets/site-config.js` and deployed on all three hosts; Realtime/DebugView confirmation is still pending.
 - Canonical host is set to `https://implementationpages.vercel.app` with optional redirect toggle.
 

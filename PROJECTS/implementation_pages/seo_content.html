@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SEO & Content | AtlasFlow</title>
+    <meta
+      name="description"
+      content="AtlasFlow SEO and content systems for regulated, competitive, and premium brands that need qualified organic demand and stronger authority."
+    />
+    <link rel="canonical" href="https://implementationpages.vercel.app/seo_content.html" />
+    <style>
+      :root {
+        --bg: #060707;
+        --panel: #0b0c0c;
+        --panel-soft: #0f1814;
+        --ink: #f2f0ea;
+        --muted: #a29e94;
+        --line: rgba(212, 175, 79, 0.14);
+        --gold: #d4af4f;
+        --gold-soft: rgba(212, 175, 79, 0.1);
+        --shadow: 0 28px 80px rgba(0, 0, 0, 0.42);
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 14% 10%, rgba(8, 70, 50, 0.34) 0%, transparent 28%),
+          radial-gradient(circle at 86% 8%, rgba(212, 175, 79, 0.08) 0%, transparent 18%),
+          linear-gradient(180deg, #050606 0%, #09120d 55%, #050606 100%);
+        line-height: 1.45;
+      }
+
+      .container { width: min(1180px, 92vw); margin: 0 auto; }
+
+      .site-header {
+        border-bottom: 1px solid var(--line);
+        background: rgba(7, 8, 8, 0.86);
+        position: sticky;
+        top: 0;
+      }
+
+      .site-header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.95rem 0;
+      }
+
+      .brand { font-weight: 900; letter-spacing: 0.02em; }
+      .brand span { color: var(--gold); }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #d8d4c8;
+        font-size: 0.95rem;
+      }
+
+      nav a:hover { color: var(--gold); }
+
+      section { padding: 3.7rem 0; }
+      .hero { padding-top: 4.8rem; }
+
+      .eyebrow {
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        color: var(--gold);
+        font-size: 0.82rem;
+        margin-bottom: 1rem;
+      }
+
+      h1, h2, h3 { margin: 0 0 0.8rem; line-height: 1.08; }
+      h1 { font-size: clamp(3rem, 6vw, 5rem); max-width: 10ch; }
+      h2 { font-size: clamp(2rem, 4vw, 3rem); }
+      p { margin: 0 0 1rem; color: var(--muted); }
+
+      .hero-wrap,
+      .card,
+      .challenge-card,
+      .deliver-card,
+      .faq-card,
+      .cta-box {
+        border: 1px solid var(--line);
+        border-radius: 1.2rem;
+        box-shadow: var(--shadow);
+      }
+
+      .hero-wrap {
+        background: linear-gradient(135deg, rgba(8, 12, 10, 0.98) 0%, rgba(10, 36, 27, 0.96) 58%, rgba(12, 62, 44, 0.92) 100%);
+        padding: 1.7rem;
+      }
+
+      .hero-wrap p { max-width: 58ch; }
+
+      .badge-row,
+      .cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.85rem;
+      }
+
+      .badge-row { margin: 1rem 0 1.1rem; }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.45rem 0.8rem;
+        border-radius: 999px;
+        border: 1px solid rgba(212, 175, 79, 0.18);
+        background: rgba(255, 255, 255, 0.04);
+        color: #e7e0cf;
+        font-size: 0.86rem;
+      }
+
+      .btn {
+        display: inline-block;
+        text-decoration: none;
+        padding: 0.82rem 1.2rem;
+        border-radius: 0.8rem;
+        border: 1px solid var(--line);
+        font-weight: 800;
+        color: var(--ink);
+      }
+
+      .btn-primary {
+        background: var(--gold);
+        border-color: var(--gold);
+        color: #17120c;
+      }
+
+      .grid,
+      .challenge-grid,
+      .deliver-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1.1rem;
+      }
+
+      .card,
+      .challenge-card,
+      .deliver-card,
+      .faq-card {
+        background: var(--panel);
+        padding: 1.25rem;
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 0.9rem;
+        margin-top: 1.2rem;
+      }
+
+      .stat-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid var(--line);
+        border-radius: 1rem;
+        padding: 1rem;
+      }
+
+      .stat-card strong {
+        display: block;
+        color: var(--gold);
+        font-size: 1.15rem;
+        margin-bottom: 0.2rem;
+      }
+
+      .deliver-card strong {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 999px;
+        margin-bottom: 0.75rem;
+        background: var(--gold-soft);
+        color: var(--gold);
+        font-size: 0.9rem;
+      }
+
+      .faq-card h3 {
+        color: var(--gold);
+        font-size: 1rem;
+      }
+
+      .cta-box {
+        background: linear-gradient(115deg, #0a0b0b 0%, #11392c 55%, #d4af4f 145%);
+        padding: 1.45rem;
+      }
+
+      .site-footer {
+        border-top: 1px solid var(--line);
+        padding: 1.45rem 0 2rem;
+        color: #8f8b82;
+        font-size: 0.92rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <div class="brand">ATLAS<span>FLOW</span></div>
+        <nav aria-label="Primary">
+          <ul>
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="https://tidycal.com/1042lpn/15-minute-meeting">Book a Call</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero-wrap">
+            <div class="eyebrow">Organic Growth Experts</div>
+            <h1>SEO & Content For Durable Demand</h1>
+            <p>
+              AtlasFlow builds search and content systems for brands that need more than random publishing. The goal is
+              qualified organic demand, stronger authority, and pages that support revenue instead of just traffic.
+            </p>
+            <div class="badge-row">
+              <span class="badge">Technical SEO</span>
+              <span class="badge">Content Strategy</span>
+              <span class="badge">Authority Building</span>
+              <span class="badge">Reporting</span>
+            </div>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="https://tidycal.com/1042lpn/15-minute-meeting">Book a Consultation</a>
+              <a class="btn" href="services.html">Back To Services</a>
+            </div>
+            <div class="stats-grid">
+              <div class="stat-card">
+                <strong>Visibility</strong>
+                Get found for terms that actually matter commercially.
+              </div>
+              <div class="stat-card">
+                <strong>Authority</strong>
+                Build trust through stronger structure and better content depth.
+              </div>
+              <div class="stat-card">
+                <strong>Intent</strong>
+                Match pages to what buyers are actually trying to solve.
+              </div>
+              <div class="stat-card">
+                <strong>Compounding</strong>
+                Improve results over time instead of renting every click.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="eyebrow">The Challenge</div>
+          <h2>Why Organic Growth Stalls For Most Brands</h2>
+          <div class="challenge-grid">
+            <article class="challenge-card">
+              <h3>Low Search Visibility</h3>
+              <p>Brands stay buried because the site structure, page targeting, and topic coverage never become commercially sharp.</p>
+            </article>
+            <article class="challenge-card">
+              <h3>Content Without Strategy</h3>
+              <p>Publishing without a clear map creates noise instead of demand, especially in regulated or competitive sectors.</p>
+            </article>
+            <article class="challenge-card">
+              <h3>Technical SEO Decay</h3>
+              <p>Weak architecture, slow pages, and poor crawl signals quietly erode rankings even when the offer is strong.</p>
+            </article>
+            <article class="challenge-card">
+              <h3>Authority Gaps</h3>
+              <p>When the brand has no topical depth or supporting trust signals, high-value keywords stay out of reach.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="eyebrow">What We Deliver</div>
+          <h2>SEO & Content Execution Areas</h2>
+          <div class="deliver-grid">
+            <article class="deliver-card">
+              <strong>01</strong>
+              <h3>Technical SEO Audits</h3>
+              <p>Structured audits around crawlability, performance, indexing, architecture, and the issues that hold pages back.</p>
+            </article>
+            <article class="deliver-card">
+              <strong>02</strong>
+              <h3>Content Strategy & Planning</h3>
+              <p>Topic maps, keyword clusters, commercial priorities, and editorial direction tied to how the business actually grows.</p>
+            </article>
+            <article class="deliver-card">
+              <strong>03</strong>
+              <h3>Landing & Article Systems</h3>
+              <p>Money pages, authority pages, and educational content designed to support both search visibility and conversion quality.</p>
+            </article>
+            <article class="deliver-card">
+              <strong>04</strong>
+              <h3>Authority Building</h3>
+              <p>Support for link growth, digital PR angles, and credibility structure that helps the site compete in harder markets.</p>
+            </article>
+            <article class="deliver-card">
+              <strong>05</strong>
+              <h3>Local & Niche Search</h3>
+              <p>Geo-targeted and industry-specific search strategy for operators who win through precision instead of scale alone.</p>
+            </article>
+            <article class="deliver-card">
+              <strong>06</strong>
+              <h3>Reporting & Iteration</h3>
+              <p>Performance tracking that shows what pages are gaining traction, what content is converting, and what needs revision.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="eyebrow">How It Fits</div>
+          <div class="grid">
+            <article class="card">
+              <h3>Best For</h3>
+              <p>Brands that want search demand, stronger authority, and content that supports the wider AtlasFlow growth system.</p>
+            </article>
+            <article class="card">
+              <h3>Related Path</h3>
+              <p>This service pairs naturally with paid advertising, brand positioning, Shopify, and regulated-market education work.</p>
+            </article>
+            <article class="card">
+              <h3>Starting Point</h3>
+              <p>If the site has content but little traction, start with a direct review before adding more pages blindly.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="eyebrow">FAQ</div>
+          <div class="grid">
+            <article class="faq-card">
+              <h3>How long does SEO take?</h3>
+              <p>It depends on site quality, authority, and competition, but the work should create stronger signals long before rankings fully mature.</p>
+            </article>
+            <article class="faq-card">
+              <h3>Do you write content too?</h3>
+              <p>Yes. AtlasFlow can handle strategy, page planning, long-form content, and structural editing where needed.</p>
+            </article>
+            <article class="faq-card">
+              <h3>Can this work in regulated sectors?</h3>
+              <p>Yes. Search and content are often even more important when paid-media options are restricted or unstable.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="cta-box">
+            <h2>If your organic growth feels random or flat, start with a direct conversation.</h2>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="https://tidycal.com/1042lpn/15-minute-meeting">Book a Consultation</a>
+              <a class="btn" href="contact.html">Contact AtlasFlow</a>
+              <a class="btn" href="services.html">Back To Services</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">AtlasFlow | SEO and content systems for regulated, premium, and competitive brands.</div>
+    </footer>
+    <script src="assets/site-config.js" defer></script>
+    <script src="assets/site-runtime.js" defer></script>
+  </body>
+</html>

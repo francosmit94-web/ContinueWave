@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thanks | AtlasFlow</title>
+    <meta
+      name="description"
+      content="Your AtlasFlow submission has been received."
+    />
+    <link rel="canonical" href="https://implementationpages.vercel.app/form_success.html" />
+    <style>
+      :root {
+        --bg: #f3efe8;
+        --ink: #121416;
+        --muted: #536066;
+        --line: #d5cdc1;
+        --brand: #214c65;
+        --brand-soft: #e9f1f7;
+        --card: #fbf8f4;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 0% 0%, #f9f5ed 0%, transparent 42%),
+          radial-gradient(circle at 100% 0%, #e4edf4 0%, transparent 38%),
+          linear-gradient(180deg, var(--bg) 0%, #faf7f2 100%);
+      }
+
+      .card {
+        width: min(680px, 92vw);
+        padding: 1.4rem;
+        border-radius: 1rem;
+        border: 1px solid var(--line);
+        background: var(--card);
+      }
+
+      h1 {
+        margin: 0 0 0.8rem;
+        line-height: 1.1;
+        font-size: clamp(1.8rem, 4.4vw, 2.8rem);
+      }
+
+      p {
+        margin: 0 0 1rem;
+        color: var(--muted);
+        line-height: 1.45;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        margin-top: 1rem;
+      }
+
+      .btn {
+        display: inline-block;
+        text-decoration: none;
+        padding: 0.72rem 1.1rem;
+        border-radius: 999px;
+        border: 1px solid transparent;
+        font-weight: 700;
+      }
+
+      .btn-primary {
+        background: var(--brand);
+        border-color: var(--brand);
+        color: #fff;
+      }
+
+      .btn-secondary {
+        background: var(--brand-soft);
+        border-color: #bcd0dd;
+        color: var(--brand);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <h1>Thanks. Your submission has been received.</h1>
+      <p>
+        AtlasFlow has your details. If the submission was a fit inquiry, audit request, or strategy request,
+        the next step can happen by email.
+      </p>
+      <p>
+        You can close this page or continue browsing the site.
+      </p>
+      <div class="actions">
+        <a class="btn btn-primary" href="homepage.html">Back to Home</a>
+        <a class="btn btn-secondary" href="contact.html">Return to Contact</a>
+      </div>
+    </main>
+    <script src="assets/site-config.js" defer></script>
+    <script src="assets/site-runtime.js" defer></script>
+  </body>
+</html>

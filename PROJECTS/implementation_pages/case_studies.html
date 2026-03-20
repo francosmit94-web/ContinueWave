@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Case Studies | AtlasFlow</title>
+    <meta
+      name="description"
+      content="Selected AtlasFlow case studies across cannabis, CBD, and e-commerce brands that needed clearer positioning, stronger conversion paths, and better growth execution."
+    />
+    <link rel="canonical" href="https://implementationpages.vercel.app/case_studies.html" />
+    <style>
+      :root {
+        --bg: #070808;
+        --panel: #0d0f0f;
+        --card: #101413;
+        --ink: #f1efe9;
+        --muted: #a7a194;
+        --line: rgba(212, 175, 79, 0.15);
+        --gold: #d4af4f;
+        --green: #123b2f;
+        --teal: #123a55;
+        --burnt: #5b2e14;
+        --shadow: 0 28px 80px rgba(0, 0, 0, 0.42);
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 14% 10%, rgba(13, 64, 46, 0.34) 0%, transparent 28%),
+          radial-gradient(circle at 84% 8%, rgba(212, 175, 79, 0.08) 0%, transparent 18%),
+          linear-gradient(180deg, #050606 0%, #090c0c 55%, #050606 100%);
+        line-height: 1.45;
+      }
+
+      .container { width: min(1180px, 92vw); margin: 0 auto; }
+
+      .site-header {
+        border-bottom: 1px solid var(--line);
+        background: rgba(7, 8, 8, 0.88);
+        position: sticky;
+        top: 0;
+      }
+
+      .site-header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.95rem 0;
+      }
+
+      .brand { font-weight: 900; letter-spacing: 0.02em; }
+      .brand span { color: var(--gold); }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #d8d4c8;
+        font-size: 0.95rem;
+      }
+
+      nav a:hover { color: var(--gold); }
+
+      section { padding: 3.7rem 0; }
+      .hero { padding-top: 4.8rem; }
+
+      .eyebrow {
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        color: var(--gold);
+        font-size: 0.82rem;
+        margin-bottom: 1rem;
+      }
+
+      h1, h2, h3 { margin: 0 0 0.8rem; line-height: 1.08; }
+      h1 { font-size: clamp(3rem, 6vw, 5rem); max-width: 11ch; }
+      h2 { font-size: clamp(2rem, 4vw, 3rem); }
+      p { margin: 0 0 1rem; color: var(--muted); }
+
+      .hero-wrap,
+      .study-card,
+      .summary-card,
+      .cta-box {
+        border: 1px solid var(--line);
+        border-radius: 1.2rem;
+        box-shadow: var(--shadow);
+      }
+
+      .hero-wrap {
+        background: linear-gradient(135deg, rgba(8, 13, 11, 0.98) 0%, rgba(13, 43, 33, 0.96) 52%, rgba(18, 31, 48, 0.94) 100%);
+        padding: 1.7rem;
+      }
+
+      .hero-wrap p { max-width: 58ch; }
+
+      .cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.85rem;
+        margin-top: 1rem;
+      }
+
+      .btn {
+        display: inline-block;
+        text-decoration: none;
+        padding: 0.82rem 1.2rem;
+        border-radius: 0.8rem;
+        border: 1px solid var(--line);
+        font-weight: 800;
+        color: var(--ink);
+      }
+
+      .btn-primary {
+        background: var(--gold);
+        border-color: var(--gold);
+        color: #17120c;
+      }
+
+      .summary-grid,
+      .study-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1.1rem;
+      }
+
+      .summary-card,
+      .study-card {
+        background: var(--card);
+        padding: 1.25rem;
+      }
+
+      .summary-card strong {
+        display: block;
+        color: var(--gold);
+        font-size: 1.2rem;
+        margin-bottom: 0.2rem;
+      }
+
+      .study-card.green { background: linear-gradient(180deg, rgba(9, 20, 16, 0.98) 0%, rgba(11, 52, 39, 0.92) 100%); }
+      .study-card.blue { background: linear-gradient(180deg, rgba(9, 16, 21, 0.98) 0%, rgba(13, 45, 68, 0.92) 100%); }
+      .study-card.burnt { background: linear-gradient(180deg, rgba(18, 13, 9, 0.98) 0%, rgba(82, 42, 16, 0.92) 100%); }
+
+      .study-card p,
+      .study-card li { color: #ddd7cb; }
+
+      .study-card ul {
+        margin: 0.7rem 0 0;
+        padding-left: 1rem;
+      }
+
+      .study-metric {
+        display: inline-block;
+        padding: 0.35rem 0.6rem;
+        border-radius: 999px;
+        border: 1px solid rgba(212, 175, 79, 0.18);
+        background: rgba(255, 255, 255, 0.06);
+        color: var(--gold);
+        font-weight: 800;
+        margin-bottom: 0.85rem;
+      }
+
+      .cta-box {
+        background: linear-gradient(115deg, #0a0b0b 0%, #11392c 45%, #123a55 78%, #d4af4f 145%);
+        padding: 1.45rem;
+      }
+
+      .site-footer {
+        border-top: 1px solid var(--line);
+        padding: 1.45rem 0 2rem;
+        color: #8f8b82;
+        font-size: 0.92rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <div class="brand">ATLAS<span>FLOW</span></div>
+        <nav aria-label="Primary">
+          <ul>
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="https://tidycal.com/1042lpn/15-minute-meeting">Book a Call</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero-wrap">
+            <div class="eyebrow">Our Work</div>
+            <h1>Case Studies That Make The Offer Credible</h1>
+            <p>
+              AtlasFlow operates in harder categories, so proof matters. These examples are the kind of commercial
+              outcomes and operating upgrades the work is designed to create across regulated brands, CBD operators,
+              and e-commerce surfaces.
+            </p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="https://tidycal.com/1042lpn/15-minute-meeting">Book a Call</a>
+              <a class="btn" href="services.html">View Services</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="summary-grid">
+            <article class="summary-card">
+              <strong>Regulated</strong>
+              Cannabis and CBD brands needing compliance-aware growth logic.
+            </article>
+            <article class="summary-card">
+              <strong>Commerce</strong>
+              Shopify and conversion surfaces that need cleaner buying paths.
+            </article>
+            <article class="summary-card">
+              <strong>Proof</strong>
+              Revenue, ROAS, and structural improvement instead of vague marketing claims.
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="eyebrow">Selected Work</div>
+          <h2>Three Reference Cases Inside The AtlasFlow Direction</h2>
+          <div class="study-grid">
+            <article class="study-card green">
+              <div class="study-metric">312% Revenue Increase</div>
+              <h3>GreenLeaf Co.</h3>
+              <p>
+                Cannabis brand repositioning and digital growth restructuring for a fast-growing regulated operator that
+                needed stronger commercial clarity and a more deliberate market surface.
+              </p>
+              <ul>
+                <li>Brand overhaul and digital strategy reset</li>
+                <li>Improved trust and conversion direction</li>
+                <li>Regulated-market operating context</li>
+              </ul>
+            </article>
+            <article class="study-card blue">
+              <div class="study-metric">€1.2M Annual Revenue</div>
+              <h3>PureCBD Europe</h3>
+              <p>
+                CBD growth architecture built around platform policy, multi-market complexity, and a stronger path from
+                awareness into scalable revenue.
+              </p>
+              <ul>
+                <li>Compliance-first European CBD growth model</li>
+                <li>Multi-channel commercial structure</li>
+                <li>Policy-aware expansion logic</li>
+              </ul>
+            </article>
+            <article class="study-card burnt">
+              <div class="study-metric">4.2x ROAS</div>
+              <h3>VitalShop</h3>
+              <p>
+                Shopify redesign and paid-acquisition alignment for an e-commerce business that needed a cleaner buying
+                surface, stronger speed, and more accountable performance.
+              </p>
+              <ul>
+                <li>Store redesign for conversion improvement</li>
+                <li>Paid media and commerce alignment</li>
+                <li>Faster path from click to purchase</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="cta-box">
+            <h2>If you want the same kind of clarity applied to your brand, start with a direct conversation.</h2>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="https://tidycal.com/1042lpn/15-minute-meeting">Book a Consultation</a>
+              <a class="btn" href="contact.html">Contact AtlasFlow</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">AtlasFlow | Case studies across cannabis, CBD, and commerce growth systems.</div>
+    </footer>
+    <script src="assets/site-config.js" defer></script>
+    <script src="assets/site-runtime.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+{
+  "system": "ContinueWave",
+  "version": 1,
+  "mode": "RESET",
+  "last_updated": "2026-03-19T18:05:00+02:00",
+  "operator": {
+    "runtime": "Continue",
+    "provider": "hybrid",
+    "primary_model": "cerebras",
+    "secondary_model": "groq",
+    "fallback_model": "qwen2.5-coder:7b"
+  },
+  "payload": {
+    "active": "AtlasFlow",
+    "registry_file": "PROJECTS/payload_registry.md"
+  },
+  "focus": {
+    "primary": "build a clean independent operating brain with a fast cloud-first stack",
+    "secondary": "learn selectively from prior work without inheriting its structure",
+    "avoid": [
+      "bulk migration",
+      "desperation-driven structure",
+      "premature system sprawl"
+    ]
+  },
+  "status": {
+    "workspace_shape": "minimal_clean_core",
+    "migration_state": "foundation_clean",
+    "archive_available": false,
+    "ready_for_real_work_test": true,
+    "cloud_provider_setup_pending": false,
+    "orchestrator_mvp_ready": true,
+    "atlasflow_static_publish": {
+      "netlify": {
+        "status": "live",
+        "url": "https://atlasflow-v1-static-20260312.netlify.app",
+        "deploy_url": "https://69bbeef3c74622ffed7592a9--atlasflow-v1-static-20260312.netlify.app",
+        "verified_paths": [
+          "/",
+          "/index.html",
+          "/homepage.html",
+          "/contact.html"
+        ]
+      },
+      "vercel": {
+        "status": "live",
+        "url": "https://implementationpages.vercel.app",
+        "inspect_url": "https://vercel.com/francosmit94-7829s-projects/implementation_pages/5qNTEx896cBLGgqVcxk5DGv4zFu1",
+        "verified_paths": [
+          "/",
+          "/index.html",
+          "/homepage.html",
+          "/contact.html"
+        ]
+      },
+      "github_pages": {
+        "status": "live",
+        "branch": "gh-pages",
+        "commit": "aa281ef",
+        "remote_configured": true,
+        "origin": "https://github.com/francosmit94-web/ContinueWave.git",
+        "url": "https://francosmit94-web.github.io/ContinueWave/",
+        "verified_paths": [
+          "/",
+          "/index.html",
+          "/contact.html"
+        ]
+      },
+      "forms": {
+        "provider": "formsubmit",
+        "endpoint": "https://formsubmit.co/ajax/growth@atlasflow.co.za",
+        "activation_status": "activated_confirmed_2026-03-13",
+        "last_smoke_result": "Post-GA smoke: success=true for contact/newsletter/strategy_call"
+      },
+      "analytics": {
+        "provider": "ga4",
+        "measurement_id_set": true,
+        "measurement_id": "G-EGX6W6THK5",
+        "last_check": "Runtime/config are aligned on Vercel, Netlify, and GitHub Pages. Live runtime now supports page_view / cta_click / form_submit_attempt / form_submit_blocked / conversion_email_intent plus direct phone and WhatsApp intent tracking where links exist."
+      },
+      "recent_payload_change": "AtlasFlow v1 closeout is now governed by an explicit finish-line doc, while contact-intent tracking remains the active conversion layer and NVIDIA NeMo is parked as phase-2 research only."
+    }
+  },
+  "workflows": {
+    "session_start_ready": true,
+    "safe_file_creation_ready": true,
+    "handoff_update_ready": true,
+    "task_modes_ready": true,
+    "direct_model_calls_ready": true,
+    "prompt_library_wired": true,
+    "decision_gates_ready": true,
+    "weekly_pruning_proven": false
+  },
+  "files": {
+    "control_stack": [
+      "README.md",
+      "NOW.md",
+      "HANDOFF.md",
+      "QUEUE.md",
+      "STATE/state.json"
+    ],
+    "decision_gate_policy": "STATE/decision_gates.json",
+    "system_scope": "PROJECTS/continuewave_system_scope.md",
+    "ultimate_brain_spec": "PROJECTS/ultimate_brain_spec.md",
+    "subagent_roles": "PROJECTS/continuewave_subagent_roles.md",
+    "atlasflow_v1_finish_line": "RUNBOOKS/atlasflow_v1_finish_line.md",
+    "nemo_phase2_brief": "PROJECTS/nemo_agent_toolkit_phase2.md"
+  },
+  "major_blockers": [
+    "See BLOCKERS.md for the live blocker register.",
+    "BLK-001 (ACTIVE): Live provider calls are blocked (`403 / 1010`) on both Cerebras and Groq in the current environment (verified 2026-03-12).",
+    "BLK-003 (WATCH): OpenClaw local gateway/client auth intermittently fails with OAuth refresh + `device-auth.json` EPERM errors.",
+    "BLK-005 (WATCH): GA4 Measurement ID is deployed (`G-EGX6W6THK5`), but true backend conversion is still blocked by the current production form mode. While forms run in `email_fallback`, production can emit `page_view`, `cta_click`, `form_submit_attempt`, `form_submit_blocked`, and `conversion_email_intent`, but not `form_submit_success`.",
+    "BLK-006 (WATCH): External form provider path is unreliable (`formsubmit.co` browser certificate warning and upstream `403` through proxy)."
+  ]
+}

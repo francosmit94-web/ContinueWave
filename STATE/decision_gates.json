@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "default_decision": "ASK",
+  "default_reason": "If an action is not classified yet, pause instead of guessing.",
+  "rules": [
+    {
+      "id": "gate-local-execution",
+      "decision": "PROCEED",
+      "reason": "Routine local workspace work is delegated by default.",
+      "action_types": [
+        "read_local",
+        "edit_local",
+        "create_local_file",
+        "update_control_files",
+        "update_runbook",
+        "update_state",
+        "run_local_command",
+        "run_tests",
+        "qa_local",
+        "branch_local",
+        "commit_local",
+        "sync_blockers",
+        "build_handoff",
+        "network_read_known_host"
+      ]
+    },
+    {
+      "id": "gate-approval-required",
+      "decision": "ASK",
+      "reason": "This changes external state, public state, or the machine environment enough that Franco should confirm it first.",
+      "action_types": [
+        "send_outbound",
+        "publish_external",
+        "push_remote",
+        "change_production_config",
+        "install_dependency",
+        "request_secret",
+        "network_write_unknown_host",
+        "write_outside_workspace"
+      ]
+    },
+    {
+      "id": "gate-hard-stop",
+      "decision": "STOP",
+      "reason": "These actions are destructive, high-risk, or authority-bound and should never run unattended.",
+      "action_types": [
+        "destructive_fs",
+        "destructive_git",
+        "money_spend",
+        "legal_compliance_claim",
+        "ownership_equity_change",
+        "credential_rotation"
+      ]
+    }
+  ]
+}
